@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/training/hero-section"
+import { TrainingContent } from "@/components/training/content-section"
 import { TrainingPrograms } from "@/components/training/training-programs"
 import { WorkshopCalendar } from "@/components/training/workshop-calendar"
 import { LearningOutcomes } from "@/components/training/learning-outcomes"
@@ -13,6 +14,7 @@ export default function TrainingPage() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <TrainingContent />
       <TrainingPrograms />
       <WorkshopCalendar />
       <LearningOutcomes />

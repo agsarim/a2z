@@ -39,23 +39,11 @@ export function BookPublishingHero() {
                 </span>
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                Transform your manuscript into a professionally published book with our comprehensive publishing
-                services. We handle every technical detail while you focus on what matters most - sharing your message
-                with the world.
+              We handle the technical details of professional publishing so you can focus on what matters most: sharing your message with the world.
               </p>
             </div>
 
-            {/* Body Text */}
-            <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
-              The journey from completed manuscript to published book can feel overwhelming, especially when you're
-              navigating the complex landscape of modern publishing options. Traditional publishing routes often involve
-              lengthy delays, limited creative control, and reduced profit margins, while self-publishing can seem
-              technically daunting for authors who want to focus on writing rather than learning complex publishing
-              systems. Our comprehensive publishing services bridge this gap by providing professional-grade publishing
-              support that maintains your creative control and profit margins while ensuring your book meets the highest
-              industry standards. We've successfully published over 7,500 authors across 91 countries, creating books
-              that not only look professional but are strategically positioned for marketplace success from day one.
-            </p>
+
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
@@ -81,20 +69,17 @@ export function BookPublishingHero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative flex items-center justify-center"
           >
-            <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800/50 backdrop-blur-xl">
+            <div className="relative w-full max-w-4xl aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800/50 backdrop-blur-xl">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/book-pub-hero.jpeg?height=400&width=600"
                 alt="Professional montage showing the publishing process from manuscript to finished books in multiple formats (ebook, paperback, hardcover)."
-                width={600}
-                height={400}
+                width={800}
+                height={500}
                 className="w-full h-full object-cover"
                 unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent flex items-end justify-center p-6">
-                <p className="text-center text-slate-300 text-sm">
-                  Professional montage showing the publishing process from manuscript to finished books in multiple
-                  formats (ebook, paperback, hardcover).
-                </p>
+                
               </div>
             </div>
             {/* Floating elements */}

@@ -3,41 +3,57 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { Bot, Target, Rocket, ArrowRight, Zap } from "lucide-react"
+import { BookOpen, TrendingUp, Zap, GraduationCap, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const services = [
   {
-    icon: Bot,
-    title: "AI-Powered Book Marketing",
-    tagline: "Leverage AI to Dominate Amazon's Algorithm",
-    description:
-      "Harness the power of ChatGPT, Gemini, and MidJourney to create compelling content, optimize listings, and automate your marketing campaigns for maximum visibility and sales.",
-    features: ["AI Content Generation", "Algorithm Optimization", "Automated Campaigns", "Performance Analytics"],
-    color: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-50",
-    iconColor: "text-blue-600",
-  },
-  {
-    icon: Target,
-    title: "Amazon PPC Management",
-    tagline: "Turn Ad Spend Into Bestseller Status",
-    description:
-      "Our data-driven PPC strategies have generated over $1 million in sales for authors. We optimize every dollar to maximize your return on investment and accelerate your path to bestseller rankings.",
-    features: ["Advanced Targeting", "Bid Optimization", "ROI Maximization", "Competitor Analysis"],
-    color: "from-green-500 to-emerald-500",
-    bgColor: "bg-green-50",
-    iconColor: "text-green-600",
-  },
-  {
-    icon: Rocket,
-    title: "Complete Publishing Solutions",
+    icon: BookOpen,
+    title: "Book Publishing",
     tagline: "From Manuscript to Marketplace Success",
     description:
-      "End-to-end publishing services including formatting, cover design, SEO optimization, and strategic launch planning that positions your book for immediate market impact.",
-    features: ["Professional Design", "SEO Optimization", "Launch Strategy", "Global Distribution"],
-    color: "from-purple-500 to-pink-500",
+      "Professional publishing services that handle the technical details so you can focus on sharing your message. We've successfully published over 7,500 authors across 91 countries.",
+    features: ["Professional Formatting", "Cover Design", "Global Distribution", "Quality Assurance"],
+    color: "from-blue-500 to-indigo-500",
+    bgColor: "bg-blue-50",
+    iconColor: "text-blue-600",
+    href: "/services/book-publishing",
+  },
+  {
+    icon: TrendingUp,
+    title: "Book Marketing",
+    tagline: "Turn Your Published Book Into a Bestselling Business Asset",
+    description:
+      "AI-powered marketing strategies that dominate Amazon's algorithm and build thriving author brands. Our services have generated over $1 million in sales for authors.",
+    features: ["AI-Powered Campaigns", "Amazon Optimization", "Brand Building", "Sales Analytics"],
+    color: "from-teal-500 to-blue-500",
+    bgColor: "bg-teal-50",
+    iconColor: "text-teal-600",
+    href: "/services/book-marketing",
+  },
+  {
+    icon: Zap,
+    title: "Digital Marketing",
+    tagline: "AI-Powered Marketing That Creates Industry Leaders",
+    description:
+      "Cutting-edge digital marketing services that leverage AI and data-driven strategies to expand your reach and establish you as an authority in your field.",
+    features: ["AI Marketing Tools", "Platform Optimization", "Content Strategy", "Performance Tracking"],
+    color: "from-purple-500 to-blue-500",
     bgColor: "bg-purple-50",
     iconColor: "text-purple-600",
+    href: "/services/digital-marketing",
+  },
+  {
+    icon: GraduationCap,
+    title: "Training & Workshops",
+    tagline: "Master AI-Powered Marketing Through Hands-On Training",
+    description:
+      "Comprehensive training programs that teach the exact AI-powered strategies used to generate millions in sales. Learn through hands-on workshops and ongoing mentorship.",
+    features: ["Live Workshops", "AI Tools Training", "Mentorship Programs", "Certification"],
+    color: "from-indigo-500 to-purple-500",
+    bgColor: "bg-indigo-50",
+    iconColor: "text-indigo-600",
+    href: "/training",
   },
 ]
 
@@ -65,7 +81,7 @@ export function ServicesPreview() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -99,10 +115,12 @@ export function ServicesPreview() {
                     </div>
 
                     {/* CTA */}
-                    <Button variant="outline" className="w-full group bg-transparent">
-                      Learn More
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    <Link href={service.href}>
+                      <Button variant="outline" className="w-full group bg-transparent">
+                        Learn More
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

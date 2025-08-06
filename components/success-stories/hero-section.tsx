@@ -74,8 +74,7 @@ export function HeroSection() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              Discover how authors from around the world have transformed their publishing dreams into bestselling
-              reality through our proven marketing strategies and comprehensive support.
+            Discover how writers from around the world transformed their publishing dreams into reality with our expert guidance and proven strategies.
             </p>
           </div>
 

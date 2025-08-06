@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Award, BookOpen, Users, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const credentials = [
   {
@@ -76,10 +77,12 @@ export function AboutPreview() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                View Full Biography
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <Link href="/about">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  View Full Biography
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
               <Button size="lg" variant="outline">
                 Schedule Consultation
               </Button>
@@ -96,7 +99,7 @@ export function AboutPreview() {
             <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/images/headshot2-hq.jpg"
                   alt="Syed Saqib Mumtaz Hashmi - Digital Marketing Expert"
                   width={400}
                   height={400}

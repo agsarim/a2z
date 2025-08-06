@@ -25,9 +25,7 @@ export function HeroSection() {
               Ready to Transform Your Book Into a Bestselling Business Asset?
             </h1>
             <p className="max-w-[600px] text-lg md:text-xl leading-relaxed">
-              Schedule your free strategy consultation today and discover exactly how our proven marketing strategies
-              can accelerate your author success. No obligation, just actionable insights tailored to your specific
-              goals.
+            Schedule a free, no-obligation strategy call today. Get a custom action plan and discover how we can help you achieve your author goals.
             </p>
           </div>
         </div>

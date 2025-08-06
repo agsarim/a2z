@@ -117,7 +117,7 @@ export function AboutHero() {
 
                 <div className="relative bg-white rounded-2xl p-6 shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=500&width=400"
+                    src="/images/headshot9.jpg?height=500&width=400"
                     alt="Syed Saqib Mumtaz Hashmi - Digital Marketing Expert"
                     width={400}
                     height={500}

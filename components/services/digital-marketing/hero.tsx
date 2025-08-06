@@ -42,10 +42,7 @@ export function DigitalMarketingHero() {
                 </span>
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                Leverage cutting-edge artificial intelligence and proven digital strategies to dominate Amazon's
-                algorithm, expand your global reach, and build a sustainable author business that generates consistent
-                revenue.
-              </p>
+              We leverage cutting-edge AI and data-driven strategies to dominate Amazon's algorithm, expand your reach, and build a thriving author brand.              </p>
             </div>
 
             {/* Body Text */}
@@ -85,12 +82,13 @@ export function DigitalMarketingHero() {
           >
             <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800/50 backdrop-blur-xl">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/dig-marketing-hero.jpeg?"
                 alt="Modern digital workspace with AI tools and analytics dashboards"
                 width={600}
                 height={400}
                 className="w-full h-full object-cover"
                 unoptimized
+                zoom={1.5}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent flex items-end justify-center p-6">
                 <p className="text-center text-slate-300 text-sm">

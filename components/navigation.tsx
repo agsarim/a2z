@@ -15,12 +15,10 @@ const navigation = [
       { name: "Digital Marketing", href: "/services/digital-marketing" },
       { name: "Book Publishing", href: "/services/book-publishing" },
       { name: "Book Marketing", href: "/services/book-marketing" },
-      { name: "AI-Powered Marketing", href: "/services/ai-marketing" },
-      { name: "Consultancy & Mentorship", href: "/services/consultancy" },
+      { name: "Workshops & Training", href: "/training" },
     ],
   },
   { name: "Success Stories", href: "/success-stories" },
-  { name: "Workshops & Training", href: "/training" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ]
@@ -36,10 +34,10 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">A2Z</span>
+              <span className="text-white font-bold text-lg"></span>
             </div>
             <div className="hidden sm:block">
-              <div className="font-bold text-slate-900">A2ZPublishing</div>
+              <div className="font-bold text-slate-900">Saqib Mumtaz Hashmi</div>
               <div className="text-xs text-slate-600">Digital Marketing Excellence</div>
             </div>
           </Link>

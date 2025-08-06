@@ -41,8 +41,7 @@ export function HeroSection() {
                 </span>
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                Join 7,500+ authors who've achieved bestseller status through our proven digital marketing strategies.
-                From manuscript to marketplace dominance - we make publishing dreams reality.
+              From manuscript to marketplace, we use proven digital strategies to turn authors into success stories. Join over 7,500 writers who have topped the charts.
               </p>
             </div>
 

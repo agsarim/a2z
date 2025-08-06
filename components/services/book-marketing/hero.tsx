@@ -39,22 +39,10 @@ export function BookMarketingHero() {
                 </span>
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-                Publishing your book is just the beginning. Our proven marketing strategies transform published authors
-                into bestselling brands that generate consistent revenue and build lasting reader communities.
-              </p>
+              We leverage cutting-edge AI and data-driven strategies to dominate Amazon's algorithm, expand your reach, and build a thriving author brand.              </p>
             </div>
 
-            {/* Body Text */}
-            <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
-              The harsh reality of modern publishing is that even the most brilliantly written books can languish in
-              obscurity without strategic marketing. With over 4 million books published annually, standing out requires
-              more than great content - it demands sophisticated marketing strategies that understand platform
-              algorithms, reader psychology, and the complex dynamics of digital book discovery. Our book marketing
-              services have generated over $1 million in sales for authors across diverse genres, turning unknown
-              writers into recognized authorities in their fields. We don't just run ads; we build comprehensive
-              marketing ecosystems that create sustainable, long term success for serious authors who are ready to treat
-              their writing as a business.
-            </p>
+
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
@@ -82,7 +70,7 @@ export function BookMarketingHero() {
           >
             <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800/50 backdrop-blur-xl">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/book-mark-hero.png?height=400&width=600"
                 alt="Dynamic visualization showing book sales growth, social media engagement, and bestseller rankings with upward trending arrows and success metrics."
                 width={600}
                 height={400}

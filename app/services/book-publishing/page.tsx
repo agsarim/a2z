@@ -1,4 +1,5 @@
 import { BookPublishingHero } from "@/components/services/book-publishing/hero"
+import { BookPublishingContent } from "@/components/services/book-publishing/content-section"
 import { PublishingPricingPackages } from "@/components/services/book-publishing/pricing-packages"
 import { PublishingProcessWorkflow } from "@/components/services/book-publishing/publishing-workflow"
 import { QualityShowcase } from "@/components/services/book-publishing/quality-showcase"
@@ -9,6 +10,7 @@ export default function BookPublishingPage() {
   return (
     <main className="min-h-screen">
       <BookPublishingHero />
+      <BookPublishingContent />
       <PublishingPricingPackages />
       <PublishingProcessWorkflow />
       <QualityShowcase />
