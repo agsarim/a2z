@@ -7,7 +7,7 @@ import { Navigation } from "@/components/navigation"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "A2ZPublishing - Transform Your Book Into a Bestseller",
+  title: "Saqib Mumtaz - Transform Your Book Into a Bestseller",
   description:
     "Join 7,500+ authors who have achieved bestseller status through our proven AI-powered digital marketing strategies. Expert book publishing and marketing services.",
     generator: 'v0.dev'
