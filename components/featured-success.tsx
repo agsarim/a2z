@@ -39,15 +39,13 @@ export function FeaturedSuccess() {
         >
           <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Star className="w-4 h-4" />
-            Client Success Story
+            Featured work & testimonial
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            From Unknown Author to
-            <span className="text-green-600"> #1 Amazon Bestseller</span>
+            Selected results from recent collaborations
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Discover how strategic digital marketing transformed Brenda Bence from a struggling author into a multiple
-            bestseller with global reach and sustained success.
+            Real projects, measurable outcomes, and client relationships I&apos;m proud of.
           </p>
         </motion.div>
 
@@ -98,10 +96,14 @@ export function FeaturedSuccess() {
               </CardContent>
             </Card>
 
-            <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
-              Read More Success Stories
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <div className="w-full">
+              <a href="/success-stories">
+                <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
+                  View full portfolio
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
+            </div>
           </motion.div>
 
           {/* Right Content - Results */}
@@ -112,7 +114,7 @@ export function FeaturedSuccess() {
             className="space-y-8"
           >
             <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8">
-              <h4 className="text-2xl font-bold text-slate-900 mb-6">Results Achieved</h4>
+              <h4 className="text-2xl font-bold text-slate-900 mb-6">Results achieved</h4>
 
               <div className="grid gap-6">
                 {achievements.map((achievement, index) => (

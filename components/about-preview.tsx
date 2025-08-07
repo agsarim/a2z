@@ -41,15 +41,15 @@ export function AboutPreview() {
           >
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-sm font-medium">
-                Meet Your Strategic Partner
+                About me
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                Digital Marketing Strategist &<span className="text-blue-600"> AI Implementation Expert</span>
+                Helping authors and brands grow with <span className="text-blue-600">AI-powered marketing</span>
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Syed Saqib Mumtaz Hashmi stands at the forefront of digital book marketing and AI-powered publishing
-                solutions. With over a decade of experience transforming authors into bestselling success stories, Saqib
-                combines deep technical expertise with proven marketing strategies that deliver measurable results.
+                I&apos;m Saqib – a marketer, publishing strategist, and trainer. Over the last 20+ years I&apos;ve helped
+                launch campaigns, build brands, and turn ideas into outcomes. I pair practical strategy with hands-on
+                execution, so you get plans that ship and results you can measure.
               </p>
             </div>
 
@@ -77,15 +77,17 @@ export function AboutPreview() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/about">
+              <Link href="/contact">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  View Full Biography
+                  Work with me
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline">
-                Schedule Consultation
-              </Button>
+              <Link href="/about">
+                <Button size="lg" variant="outline">
+                  View full bio
+                </Button>
+              </Link>
             </div>
           </motion.div>
 
@@ -99,7 +101,7 @@ export function AboutPreview() {
             <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <Image
-                  src="/images/headshot2-hq.jpg"
+                  src="/images/headshot9.jpg"
                   alt="Syed Saqib Mumtaz Hashmi - Digital Marketing Expert"
                   width={400}
                   height={400}

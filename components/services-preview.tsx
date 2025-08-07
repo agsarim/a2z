@@ -3,57 +3,57 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { BookOpen, TrendingUp, Zap, GraduationCap, ArrowRight } from "lucide-react"
+import { BookOpen, Rocket, Mic, GraduationCap, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 const services = [
   {
-    icon: BookOpen,
-    title: "Book Publishing",
-    tagline: "From Manuscript to Marketplace Success",
+    icon: Rocket,
+    title: "Growth Marketing Advisory",
+    tagline: "Designing systems that scale sustainably",
     description:
-      "Professional publishing services that handle the technical details so you can focus on sharing your message. We've successfully published over 7,500 authors across 91 countries.",
-    features: ["Professional Formatting", "Cover Design", "Global Distribution", "Quality Assurance"],
+      "Full-funnel strategy, performance marketing, and analytics to turn attention into revenue without burning your brand.",
+    features: ["Funnel design", "Paid media", "Analytics", "CRO"],
     color: "from-blue-500 to-indigo-500",
     bgColor: "bg-blue-50",
     iconColor: "text-blue-600",
-    href: "/services/book-publishing",
+    href: "/contact",
   },
   {
-    icon: TrendingUp,
-    title: "Book Marketing",
-    tagline: "Turn Your Published Book Into a Bestselling Business Asset",
+    icon: BookOpen,
+    title: "Publishing Strategy & Launch",
+    tagline: "From positioning to #1 bestseller",
     description:
-      "AI-powered marketing strategies that dominate Amazon's algorithm and build thriving author brands. Our services have generated over $1 million in sales for authors.",
-    features: ["AI-Powered Campaigns", "Amazon Optimization", "Brand Building", "Sales Analytics"],
+      "End-to-end publishing guidance: positioning, Amazon optimization, and launch playbooks tailored to your goals.",
+    features: ["Positioning", "Amazon SEO", "Launch playbooks", "Book-to-business"],
     color: "from-teal-500 to-blue-500",
     bgColor: "bg-teal-50",
     iconColor: "text-teal-600",
-    href: "/services/book-marketing",
-  },
-  {
-    icon: Zap,
-    title: "Digital Marketing",
-    tagline: "AI-Powered Marketing That Creates Industry Leaders",
-    description:
-      "Cutting-edge digital marketing services that leverage AI and data-driven strategies to expand your reach and establish you as an authority in your field.",
-    features: ["AI Marketing Tools", "Platform Optimization", "Content Strategy", "Performance Tracking"],
-    color: "from-purple-500 to-blue-500",
-    bgColor: "bg-purple-50",
-    iconColor: "text-purple-600",
-    href: "/services/digital-marketing",
+    href: "/services/book-publishing",
   },
   {
     icon: GraduationCap,
-    title: "Training & Workshops",
-    tagline: "Master AI-Powered Marketing Through Hands-On Training",
+    title: "Training & Mentorship",
+    tagline: "Upskill your team with hands-on learning",
     description:
-      "Comprehensive training programs that teach the exact AI-powered strategies used to generate millions in sales. Learn through hands-on workshops and ongoing mentorship.",
-    features: ["Live Workshops", "AI Tools Training", "Mentorship Programs", "Certification"],
+      "Workshops and mentorship programs that teach the exact systems I use to drive growth, with actionable templates and tools.",
+    features: ["Live workshops", "AI tools", "Team enablement", "Certification"],
+    color: "from-purple-500 to-blue-500",
+    bgColor: "bg-purple-50",
+    iconColor: "text-purple-600",
+    href: "/training",
+  },
+  {
+    icon: Mic,
+    title: "Speaking & Media",
+    tagline: "Keynotes, panels, and interviews",
+    description:
+      "Topics include AI for marketers, book-to-business, creator-led growth, and building authority in public.",
+    features: ["Keynotes", "Panels", "Workshops", "Interviews"],
     color: "from-indigo-500 to-purple-500",
     bgColor: "bg-indigo-50",
     iconColor: "text-indigo-600",
-    href: "/training",
+    href: "/contact",
   },
 ]
 
@@ -68,16 +68,14 @@ export function ServicesPreview() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Zap className="w-4 h-4" />
-            Comprehensive Solutions
+            What I do
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Transform Your Publishing Journey with
-            <span className="text-blue-600"> Expert Solutions</span>
+            How I can help you
+            <span className="text-blue-600"> win consistently</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            From AI-powered marketing to complete publishing services, we provide the comprehensive solutions you need
-            to achieve bestseller status and build a sustainable author business.
+            Practical strategy, built-for-you systems, and hands-on enablement—so you can launch, grow, and lead.
           </p>
         </motion.div>
 
@@ -117,7 +115,7 @@ export function ServicesPreview() {
                     {/* CTA */}
                     <Link href={service.href}>
                       <Button variant="outline" className="w-full group bg-transparent">
-                        Learn More
+                        Learn more
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </Link>
@@ -137,23 +135,20 @@ export function ServicesPreview() {
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="max-w-3xl mx-auto space-y-6">
-              <h3 className="text-3xl font-bold">Ready to Accelerate Your Success?</h3>
-              <p className="text-xl text-blue-100">
-                Schedule a free consultation to discover which services will deliver the best results for your specific
-                goals.
-              </p>
+              <h3 className="text-3xl font-bold">Let&apos;s work together</h3>
+              <p className="text-xl text-blue-100">Tell me about your goals—I'll share the fastest path to results.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
-                  Schedule Free Consultation
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 bg-transparent"
-                >
-                  View All Services
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+                    Book a free consult
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </Link>
+                <Link href="/success-stories">
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
+                    See case studies
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

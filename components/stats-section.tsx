@@ -1,36 +1,36 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { TrendingUp, Users, Award, Globe } from "lucide-react"
+import { Calendar, Rocket, Mic, Award } from "lucide-react"
 
 const stats = [
   {
-    icon: Users,
-    value: "7,500+",
-    label: "Authors Published",
-    description: "Successful authors across all genres",
-    color: "text-blue-400",
+    icon: Calendar,
+    value: "20+",
+    label: "Years of Experience",
+    description: "Marketing, publishing, and growth leadership",
+    color: "text-blue-500",
+  },
+  {
+    icon: Rocket,
+    value: "300+",
+    label: "Campaigns Launched",
+    description: "Full-funnel, data-driven execution",
+    color: "text-purple-500",
   },
   {
     icon: Award,
     value: "30+",
-    label: "#1 Bestsellers Created",
-    description: "Top rankings achieved",
-    color: "text-yellow-400",
+    label: "#1 Bestsellers",
+    description: "Amazon categories across regions",
+    color: "text-yellow-500",
   },
   {
-    icon: TrendingUp,
-    value: "$1M+",
-    label: "Revenue Generated",
-    description: "For our clients worldwide",
-    color: "text-green-400",
-  },
-  {
-    icon: Globe,
-    value: "91+",
-    label: "Countries Reached",
-    description: "Global marketplace presence",
-    color: "text-purple-400",
+    icon: Mic,
+    value: "100+",
+    label: "Talks & Workshops",
+    description: "Keynotes, trainings, and panels",
+    color: "text-green-500",
   },
 ]
 
@@ -44,10 +44,9 @@ export function StatsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Proven Results Across the Globe</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">By the numbers</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Our data-driven approach has consistently delivered exceptional results for authors worldwide, establishing
-            A2ZPublishing as a leader in digital book marketing.
+            A snapshot of the outcomes I&apos;ve helped create through hands-on execution, training, and mentorship.
           </p>
         </motion.div>
 

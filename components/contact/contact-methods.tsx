@@ -2,79 +2,54 @@ import { Mail, Phone, MessageCircle, Linkedin } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export function ContactMethods() {
+  const methods = [
+    {
+      icon: Mail,
+      title: "Email",
+      value: "saqib@a2zpublishing.com",
+      meta: "Within 24h on business days",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      value: "+92-XXX-XXXXXXX",
+      meta: "Mon–Fri, 9 AM–6 PM PKT",
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp",
+      value: "+92-XXX-XXXXXXX",
+      meta: "Quick questions, 24/7",
+    },
+    {
+      icon: Linkedin,
+      title: "LinkedIn",
+      value: "linkedin.com/in/syed-saqib-mumtaz-hashmi-bookmarketing",
+      meta: "Networking and referrals",
+    },
+  ]
+
   return (
-    <section className="w-full py-16 md:py-24 lg:py-32 bg-white">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900">
-            Primary Contact Methods
-          </h2>
-          <p className="max-w-[900px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Reach out to us through your preferred channel.
-          </p>
+    <section className="py-20 bg-white">
+      <div className="mx-auto w-full max-w-6xl px-4">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Primary contact methods</h2>
+          <p className="mt-2 text-slate-600">Choose the channel that works best for you.</p>
         </div>
-        <div className="mx-auto grid max-w-6xl items-start gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <Card className="flex flex-col items-center text-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className="pb-4">
-              <Mail className="h-12 w-12 text-purple-600 mb-4" />
-              <CardTitle className="text-xl font-bold text-gray-900">Email</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-gray-700">
-              <p className="font-medium">saqib@a2zpublishing.com</p>
-              <p className="text-sm">
-                <span className="font-semibold">Response Time:</span> Within 24 hours during business days
-              </p>
-              <p className="text-sm">
-                <span className="font-semibold">Best For:</span> Detailed questions, project inquiries, partnership
-                discussions
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="flex flex-col items-center text-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className="pb-4">
-              <Phone className="h-12 w-12 text-purple-600 mb-4" />
-              <CardTitle className="text-xl font-bold text-gray-900">Phone</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-gray-700">
-              <p className="font-medium">+92-XXX-XXXXXXX (Pakistan Time Zone)</p>
-              <p className="text-sm">
-                <span className="font-semibold">Available:</span> Monday-Friday, 9 AM - 6 PM PKT
-              </p>
-              <p className="text-sm">
-                <span className="font-semibold">Best For:</span> Urgent questions, consultation scheduling, immediate
-                support
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="flex flex-col items-center text-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className="pb-4">
-              <MessageCircle className="h-12 w-12 text-purple-600 mb-4" />
-              <CardTitle className="text-xl font-bold text-gray-900">WhatsApp</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-gray-700">
-              <p className="font-medium">+92-XXX-XXXXXXX</p>
-              <p className="text-sm">
-                <span className="font-semibold">Available:</span> 24/7 for quick questions
-              </p>
-              <p className="text-sm">
-                <span className="font-semibold">Best For:</span> Quick questions, file sharing, international
-                communication
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="flex flex-col items-center text-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className="pb-4">
-              <Linkedin className="h-12 w-12 text-purple-600 mb-4" />
-              <CardTitle className="text-xl font-bold text-gray-900">LinkedIn</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-gray-700">
-              <p className="font-medium">linkedin.com/in/syed-saqib-mumtaz-hashmi-bookmarketing</p>
-              <p className="text-sm">
-                <span className="font-semibold">Best For:</span> Professional networking, industry discussions,
-                referrals
-              </p>
-            </CardContent>
-          </Card>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {methods.map((m, i) => (
+            <Card key={i} className="text-center">
+              <CardHeader className="pb-2 flex items-center justify-center">
+                <m.icon className="h-10 w-10 text-blue-600" />
+                <CardTitle className="text-lg font-bold text-slate-900 mt-3">{m.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-1 text-slate-700">
+                <p className="font-medium break-words">{m.value}</p>
+                <p className="text-xs text-slate-500">{m.meta}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
