@@ -7,12 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 const credentials = [
-  {
-    icon: Award,
-    title: "MPhil Cybersecurity",
-    subtitle: "National Defence University",
-    color: "text-blue-500",
-  },
+ 
   {
     icon: BookOpen,
     title: "BE Telecommunications",
@@ -44,12 +39,10 @@ export function AboutPreview() {
                 About me
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                Helping authors and brands grow with <span className="text-blue-600">AI-powered marketing</span>
+               "Helping authors and brands grow with <span className="text-blue-600">AI-powered marketing</span> and book marketing."
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                I&apos;m Saqib – a marketer, publishing strategist, and trainer. Over the last 20+ years I&apos;ve helped
-                launch campaigns, build brands, and turn ideas into outcomes. I pair practical strategy with hands-on
-                execution, so you get plans that ship and results you can measure.
+              I’m Saqib – a marketer, publishing strategist, and trainer with years of experience launching campaigns, building brands, and turning ideas into measurable results. I combine practical strategy with hands-on execution, delivering plans that get implemented and outcomes that matter.
               </p>
             </div>
 

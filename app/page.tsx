@@ -23,19 +23,19 @@ function SignaturePlaybooks() {
     {
       icon: Sparkles,
       title: "Authority Engine",
-      desc: "A repeatable content-to-demand system that builds trust and compounds reach.",
+      desc: "A repeatable content-to-demand system that builds trust, expands reach, and drives consistent engagement.",
       color: "from-blue-500/10 to-purple-500/10",
     },
     {
       icon: Rocket,
       title: "#1 Launch Framework",
-      desc: "Positioning, offer design, and an Amazon-first rollout to hit category bestsellers.",
+      desc: "Positioning, offer design, and an Amazon-first rollout built to hit bestseller status in your category.",
       color: "from-emerald-500/10 to-teal-500/10",
     },
     {
       icon: Boxes,
       title: "Book-to-Business",
-      desc: "Turn a book into a scalable pipeline with funnels, lead magnets, and nurture.",
+      desc: "Transform your book into a revenue engine with funnels, lead magnets, and automated nurture campaigns.",
       color: "from-amber-500/10 to-pink-500/10",
     },
   ]
@@ -47,7 +47,7 @@ function SignaturePlaybooks() {
           <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
             Signature playbooks
           </div>
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">Systems I use to create results</h2>
+          <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">Proven systems to help you sell more books, grow your audience, and scale your business.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {playbooks.map((p, i) => (

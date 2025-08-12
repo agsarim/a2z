@@ -23,15 +23,7 @@ const technicalCertifications = [
     color: "text-green-600",
     bgColor: "bg-green-50",
   },
-  {
-    icon: Shield,
-    title: "MPhil Cybersecurity",
-    issuer: "National Defence University",
-    year: "2022",
-    description: "Advanced research degree focusing on social media impact on national security",
-    color: "text-purple-600",
-    bgColor: "bg-purple-50",
-  },
+ 
   {
     icon: Star,
     title: "Top Rated Plus Freelancer",
@@ -97,11 +89,9 @@ export function CredentialsSection() {
             Credentials & Expertise
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Proven Qualifications &<span className="text-green-600"> Technical Mastery</span>
-          </h2>
+          The Skills That Drive Your Results          </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            A comprehensive foundation of formal education, professional certifications, and specialized skills that
-            drive exceptional results in digital marketing.
+          Backed by formal education, professional certifications, and specialized training, I bring the technical precision and marketing expertise needed to help your book or brand stand out, sell more, and scale faster.
           </p>
         </motion.div>
 
@@ -114,7 +104,7 @@ export function CredentialsSection() {
             className="text-center mb-12"
           >
             <h3 className="text-3xl font-bold text-slate-900 mb-4">Technical Certifications</h3>
-            <p className="text-lg text-slate-600">Formal qualifications that establish credibility and expertise</p>
+            <p className="text-lg text-slate-600">Recognized qualifications that ensure your campaigns are built on proven, reliable, and results-driven strategies.</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">

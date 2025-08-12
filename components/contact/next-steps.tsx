@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, Mail, Users, Download, BookOpen, Lightbulb, MessageSquare } from "lucide-react"
+import { Calendar, Mail, Download, BookOpen, Lightbulb, MessageSquare } from "lucide-react"
 
 export function NextSteps() {
   const primary = [
@@ -21,9 +21,27 @@ export function NextSteps() {
   ]
 
   const more = [
-    { icon: BookOpen, title: "Browse success stories", desc: "See detailed case studies.", href: "/success-stories", cta: "View stories" },
-    { icon: Lightbulb, title: "Explore training", desc: "Programs and workshops.", href: "/training", cta: "Learn more" },
-    { icon: MessageSquare, title: "Read testimonials", desc: "Hear from clients.", href: "/success-stories#testimonials", cta: "Read" },
+    {
+      icon: BookOpen,
+      title: "Browse success stories",
+      desc: "See detailed case studies.",
+      href: "/success-stories",
+      cta: "View stories",
+    },
+    {
+      icon: Lightbulb,
+      title: "Explore training",
+      desc: "Programs and workshops.",
+      href: "/training",
+      cta: "Learn more",
+    },
+    {
+      icon: MessageSquare,
+      title: "Read testimonials",
+      desc: "Hear from clients.",
+      href: "/success-stories#testimonials",
+      cta: "Read",
+    },
     { icon: Download, title: "Free resources", desc: "Templates and guides.", href: "#", cta: "Get resources" },
   ]
 

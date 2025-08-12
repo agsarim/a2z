@@ -13,8 +13,8 @@ const stats = [
   },
   {
     icon: Rocket,
-    value: "300+",
-    label: "Campaigns Launched",
+    value: "220+",
+    label: "Authors/Publishers Served",
     description: "Full-funnel, data-driven execution",
     color: "text-purple-500",
   },
@@ -46,8 +46,7 @@ export function StatsSection() {
         >
           <h2 className="text-4xl font-bold text-slate-900 mb-4">By the numbers</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            A snapshot of the outcomes I&apos;ve helped create through hands-on execution, training, and mentorship.
-          </p>
+          A quick look at the results my clients have achieved through actionable strategies, hands-on execution, and practical mentorship.          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

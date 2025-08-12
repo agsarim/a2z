@@ -8,36 +8,37 @@ import Link from "next/link"
 
 const services = [
   {
-    icon: Rocket,
-    title: "Growth Marketing Advisory",
-    tagline: "Designing systems that scale sustainably",
-    description:
-      "Full-funnel strategy, performance marketing, and analytics to turn attention into revenue without burning your brand.",
-    features: ["Funnel design", "Paid media", "Analytics", "CRO"],
-    color: "from-blue-500 to-indigo-500",
-    bgColor: "bg-blue-50",
-    iconColor: "text-blue-600",
-    href: "/contact",
-  },
-  {
     icon: BookOpen,
     title: "Publishing Strategy & Launch",
     tagline: "From positioning to #1 bestseller",
     description:
       "End-to-end publishing guidance: positioning, Amazon optimization, and launch playbooks tailored to your goals.",
-    features: ["Positioning", "Amazon SEO", "Launch playbooks", "Book-to-business"],
+    features: ["A to Z Services for Publishing", "Positioning", "Amazon SEO / PPC Ads", "Book Launch Strategy "],
     color: "from-teal-500 to-blue-500",
     bgColor: "bg-teal-50",
     iconColor: "text-teal-600",
     href: "/services/book-publishing",
   },
   {
+    icon: Rocket,
+    title: "Growth Marketing Advisory",
+    tagline: "Designing systems that scale sustainably",
+    description:
+      "Full-funnel strategy, performance marketing, and analytics to turn attention into revenue without burning your brand.",
+    features: ["Funnel design", "PPC ads", "Analytics and audit", "Growth Marketing Advisory"],
+    color: "from-blue-500 to-indigo-500",
+    bgColor: "bg-blue-50",
+    iconColor: "text-blue-600",
+    href: "/services/digital-marketing",
+  },
+  
+  {
     icon: GraduationCap,
     title: "Training & Mentorship",
     tagline: "Upskill your team with hands-on learning",
     description:
       "Workshops and mentorship programs that teach the exact systems I use to drive growth, with actionable templates and tools.",
-    features: ["Live workshops", "AI tools", "Team enablement", "Certification"],
+    features: ["Live Webinar", "Live / Physical Workshops", "Mentoring Sessions", "Online Consultancy"],
     color: "from-purple-500 to-blue-500",
     bgColor: "bg-purple-50",
     iconColor: "text-purple-600",
@@ -45,11 +46,11 @@ const services = [
   },
   {
     icon: Mic,
-    title: "Speaking & Media",
+    title: "Keynote Addresses and Media",
     tagline: "Keynotes, panels, and interviews",
     description:
-      "Topics include AI for marketers, book-to-business, creator-led growth, and building authority in public.",
-    features: ["Keynotes", "Panels", "Workshops", "Interviews"],
+      "Topics include AI for marketers, Digital book publishing and marketing, creator-led growth, and building authority and branding in public and online.",
+    features: ["Keynote Addresses", "Panel Discussions", "Workshops", "Media Interviews"],
     color: "from-indigo-500 to-purple-500",
     bgColor: "bg-indigo-50",
     iconColor: "text-indigo-600",
@@ -71,8 +72,7 @@ export function ServicesPreview() {
             What I do
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            How I can help you
-            <span className="text-blue-600"> win consistently</span>
+          "Tired of marketing plans that never get off the ground? I build practical strategies, done-for-you systems, and hands-on guidance—so your books and brand don’t just launch, they grow and keep winning."
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Practical strategy, built-for-you systems, and hands-on enablement—so you can launch, grow, and lead.
@@ -135,8 +135,8 @@ export function ServicesPreview() {
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="max-w-3xl mx-auto space-y-6">
-              <h3 className="text-3xl font-bold">Let&apos;s work together</h3>
-              <p className="text-xl text-blue-100">Tell me about your goals—I'll share the fastest path to results.</p>
+              <h3 className="text-3xl font-bold">Get clarity. Get results</h3>
+              <p className="text-xl text-blue-100">Share your goals, and I’ll map out the fastest way to achieve them.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
                   <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
@@ -146,8 +146,7 @@ export function ServicesPreview() {
                 </Link>
                 <Link href="/success-stories">
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
-                    See case studies
-                  </Button>
+                  See How Others Succeeded                  </Button>
                 </Link>
               </div>
             </div>

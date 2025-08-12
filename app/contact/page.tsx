@@ -3,9 +3,9 @@ import { FreeConsultationDetails } from "@/components/contact/free-consultation-
 import { ConsultationProcess } from "@/components/contact/consultation-process"
 import { ContactMethods } from "@/components/contact/contact-methods"
 import { OfficeInformation } from "@/components/contact/office-information"
-import { FAQSection } from "@/components/contact/faq-section"
 import { PartnershipOpportunities } from "@/components/contact/partnership-opportunities"
 import { NextSteps } from "@/components/contact/next-steps"
+import { FAQSection } from "@/components/contact/faq-section"
 
 export default function ContactPage() {
   return (
@@ -14,7 +14,6 @@ export default function ContactPage() {
       <FreeConsultationDetails />
       <ConsultationProcess />
       <ContactMethods />
-      <OfficeInformation />
       <FAQSection />
       <PartnershipOpportunities />
       <NextSteps />

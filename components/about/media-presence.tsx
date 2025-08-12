@@ -35,7 +35,17 @@ const speakingEngagements = [
   },
 ]
 
-const mediaAppearances = ["PTV World", "PTV Home", "ATV", "Roze TV", "Hum News", "GTV", "Kay2TV"]
+const mediaAppearances: Array<{ name: string; url?: string }> = [
+  { name: "Hum News", url: "https://youtu.be/rFHzBkM2CpQ?si=2_fj88MIhjKHn2vX" },
+  { name: "Good Vibes Only Podcast", url: "https://youtu.be/kcnKGf3IMkE?si=QwbY6RkcB56E78U4" },
+  { name: "CxO Global Forum", url: "https://www.youtube.com/live/4LJT4s6YFQQ?si=UVGtwv-T32Ou_XPz" },
+  { name: "GTV", url: "https://youtu.be/lg5bHu5DttE?si=2OjiusC_OzuFIF9f" },
+  { name: "ATV", url: "https://youtu.be/wK1ptt5Do9E?si=wj-8vOdZc_D92C3f" },
+  { name: "PTV Home", url: "https://youtu.be/hG5VxqlDx-8?si=Q46cjsmpTkiLdfEY&t=1542" },
+  { name: "PTV World", url: "https://www.facebook.com/Saqibmumtaz/videos/901724221434811" },
+  { name: "Roze TV" },
+  { name: "Kay2TV" },
+]
 
 const podcastAppearances = [
   {
@@ -167,17 +177,35 @@ export function MediaPresence() {
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
-                    {mediaAppearances.map((network, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="bg-slate-50 rounded-lg p-4 text-center"
-                      >
-                        <div className="font-semibold text-slate-900">{network}</div>
-                      </motion.div>
-                    ))}
+                    {mediaAppearances.map((item, index) => {
+                      const tile = (
+                        <div
+                          className={`bg-slate-50 rounded-lg p-4 text-center ${
+                            item.url ? "hover:bg-slate-100 cursor-pointer" : ""
+                          }`}
+                        >
+                          <div className="font-semibold text-slate-900">{item.name}</div>
+                          {item.url && (
+                            <div className="text-xs text-blue-600 mt-1">Watch appearance</div>
+                          )}
+                        </div>
+                      )
+
+                      return (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.6, delay: index * 0.1 }}
+                        >
+                          {item.url ? (
+                            <a href={item.url} target="_blank" rel="noopener noreferrer">{tile}</a>
+                          ) : (
+                            tile
+                          )}
+                        </motion.div>
+                      )
+                    })}
                   </div>
                 </div>
               </CardContent>

@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About Saqib", href: "/about" },
+  { name: "About Syed", href: "/about" },
   {
     name: "Services",
     href: "/services",
@@ -21,6 +21,7 @@ const navigation = [
     ],
   },
   { name: "Success Stories", href: "/success-stories" },
+    { name: "Media", href: "/media" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ]
@@ -63,7 +64,7 @@ export function Navigation() {
           <Link href="/" className="hidden sm:flex items-center">
             <div className="rounded-full ring-1 ring-slate-200 bg-white/80 backdrop-blur shadow-sm px-3 py-1.5 flex items-center gap-2">
               <div className="w-5 h-5 bg-gradient-to-br from-blue-600 to-purple-600 rounded-md" />
-              <span className="font-medium text-slate-900 text-sm">Saqib Mumtaz Hashmi</span>
+              <span className="font-medium text-slate-900 text-sm">Syed Saqib Mumtaz Hashmi</span>
             </div>
           </Link>
           <Link href="/" className="sm:hidden flex items-center gap-2">

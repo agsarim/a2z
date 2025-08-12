@@ -9,7 +9,7 @@ import Image from "next/image"
 const achievements = [
   {
     icon: Star,
-    value: "Multiple #1",
+    value: "30+ Best Sellers",
     label: "Bestseller Rankings",
     color: "text-yellow-500",
   },
@@ -21,8 +21,8 @@ const achievements = [
   },
   {
     icon: Globe,
-    value: "15",
-    label: "Countries Reached",
+    value: "Worldwide reach",
+    label: "",
     color: "text-blue-500",
   },
 ]

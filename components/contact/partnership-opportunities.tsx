@@ -26,12 +26,7 @@ export function PartnershipOpportunities() {
     {
       icon: Rss,
       title: "For Media & Creators",
-      items: [
-        "Podcast interviews",
-        "Guest writing",
-        "Joint ventures",
-        "Affiliate programs",
-      ],
+      items: ["Podcast interviews", "Guest writing", "Joint ventures", "Affiliate programs"],
     },
   ]
 

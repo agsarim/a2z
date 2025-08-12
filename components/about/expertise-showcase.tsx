@@ -76,13 +76,10 @@ export function ExpertiseShowcase() {
             Core Expertise
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Unique Blend of
-            <span className="text-blue-600"> Technical & Marketing Mastery</span>
+          Solving Your Biggest             <span className="text-blue-600"> Book Marketing Challenges</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Two decades of technical expertise combined with cutting-edge marketing strategies create a powerful
-            foundation for delivering exceptional results in the digital publishing landscape.
-          </p>
+          Struggling to get your book noticed or turn clicks into sales? My 20 years of technical expertise and proven marketing strategies work together to cut through the noise, reach the right readers, and drive measurable results in the digital publishing space.          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

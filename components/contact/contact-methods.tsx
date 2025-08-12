@@ -1,5 +1,5 @@
 import { Mail, Phone, MessageCircle, Linkedin } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 
 export function ContactMethods() {
   const methods = [
@@ -7,46 +7,57 @@ export function ContactMethods() {
       icon: Mail,
       title: "Email",
       value: "saqib@a2zpublishing.com",
-      meta: "Within 24h on business days",
+      meta: "Response within 24 hours",
+      primary: true,
     },
     {
       icon: Phone,
       title: "Phone",
       value: "+92-XXX-XXXXXXX",
       meta: "Mon–Fri, 9 AM–6 PM PKT",
+      primary: false,
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       value: "+92-XXX-XXXXXXX",
-      meta: "Quick questions, 24/7",
+      meta: "Quick questions welcome",
+      primary: false,
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "linkedin.com/in/syed-saqib-mumtaz-hashmi-bookmarketing",
-      meta: "Networking and referrals",
+      value: "Connect with me",
+      meta: "Professional networking",
+      primary: false,
     },
   ]
 
   return (
     <section className="py-20 bg-white">
-      <div className="mx-auto w-full max-w-6xl px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Primary contact methods</h2>
-          <p className="mt-2 text-slate-600">Choose the channel that works best for you.</p>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Get In Touch</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Choose your preferred way to connect. I'm here to help with your book marketing journey.
+          </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {methods.map((m, i) => (
-            <Card key={i} className="text-center">
-              <CardHeader className="pb-2 flex items-center justify-center">
-                <m.icon className="h-10 w-10 text-blue-600" />
-                <CardTitle className="text-lg font-bold text-slate-900 mt-3">{m.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-1 text-slate-700">
-                <p className="font-medium break-words">{m.value}</p>
-                <p className="text-xs text-slate-500">{m.meta}</p>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto">
+          {methods.map((method, index) => (
+            <Card
+              key={index}
+              className={`text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${method.primary ? "ring-2 ring-blue-200 bg-blue-50" : ""}`}
+            >
+              <CardContent className="p-6">
+                <div
+                  className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 ${method.primary ? "bg-blue-600" : "bg-slate-100"}`}
+                >
+                  <method.icon className={`w-6 h-6 ${method.primary ? "text-white" : "text-slate-600"}`} />
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">{method.title}</h3>
+                <p className="font-medium text-slate-700 mb-1 break-words">{method.value}</p>
+                <p className="text-sm text-slate-500">{method.meta}</p>
               </CardContent>
             </Card>
           ))}

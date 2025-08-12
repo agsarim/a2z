@@ -18,20 +18,8 @@ const timelineEvents = [
       "Built analytical skills that would later revolutionize book marketing approaches",
     ],
   },
-  {
-    period: "2020-2022",
-    title: "Academic Excellence",
-    subtitle: "MPhil in Cybersecurity",
-    icon: GraduationCap,
-    color: "bg-green-500",
-    description:
-      "Specialized research on social media's impact on national security, developing deep understanding of digital influence and online behavior patterns.",
-    achievements: [
-      "Specialized research on social media's impact on national security",
-      "Developed deep understanding of digital influence and online behavior",
-      "Gained insights into platform algorithms and content optimization",
-    ],
-  },
+  
+   
   {
     period: "2022-Present",
     title: "A2ZPublishing Founder & CEO",
@@ -77,12 +65,11 @@ export function JourneyTimeline() {
             Professional Journey
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Two Decades of
-            <span className="text-purple-600"> Strategic Evolution</span>
+          Two Decades Focused on 
+            <span className="text-purple-600"> Driving Your Success</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            From telecommunications infrastructure to AI-powered marketing mastery - a journey of continuous innovation
-            and expertise development.
+          From building large-scale digital systems to mastering AI-powered marketing, my journey has been about one thing—developing the skills and strategies that help authors and brands launch faster, grow bigger, and win consistently.
           </p>
         </motion.div>
 

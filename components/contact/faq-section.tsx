@@ -1,125 +1,62 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 export function FAQSection() {
+  const faqs = [
+    {
+      question: "How quickly can I expect to see results?",
+      answer:
+        "Results vary based on genre and current performance, but most clients see initial improvements within 30-60 days. Significant results typically occur within 3-6 months of consistent implementation.",
+    },
+    {
+      question: "Do you work with all genres?",
+      answer:
+        "Yes, I work with authors across all genres, though I have the strongest track record in business, self-help, and non-fiction. Fiction authors also achieve excellent results with adapted strategies.",
+    },
+    {
+      question: "What's the minimum budget for effective marketing?",
+      answer:
+        "I recommend a minimum monthly marketing budget of $500-1000 for meaningful results, though we can work with smaller budgets by focusing on the highest-impact strategies first.",
+    },
+    {
+      question: "Do you offer guarantees on results?",
+      answer:
+        "While I can't guarantee specific sales numbers due to market variables, I do guarantee my effort, expertise, and commitment to your success. Most clients see positive ROI within 90 days.",
+    },
+    {
+      question: "Are training programs suitable for beginners?",
+      answer:
+        "Absolutely. My programs are designed to take authors from complete beginner to confident marketer, with step-by-step guidance and ongoing support.",
+    },
+    {
+      question: "How involved do I need to be in the process?",
+      answer:
+        "This depends on your preference and package selection. I offer everything from complete done-for-you services to guided implementation where you maintain control.",
+    },
+  ]
+
   return (
-    <section className="py-20 bg-white">
-      <div className="mx-auto w-full max-w-6xl px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Frequently asked questions</h2>
-          <p className="mt-2 text-slate-600">Everything you need to know about working together.</p>
+    <section className="py-20 bg-slate-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">Everything you need to know about working together</p>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-2 max-w-6xl mx-auto">
-          {/* About Services */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-slate-900 mb-4">About Services</h3>
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: How quickly can I expect to see results from book marketing?
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="bg-white rounded-lg border border-slate-200"
+              >
+                <AccordionTrigger className="px-6 py-4 text-left font-semibold text-slate-900 hover:text-blue-600 hover:no-underline">
+                  {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: Results vary based on genre, competition, and current book performance, but most clients see
-                  initial improvements within 30-60 days. Significant results typically occur within 3-6 months of
-                  consistent implementation.
-                </AccordionContent>
+                <AccordionContent className="px-6 pb-4 text-slate-700 leading-relaxed">{faq.answer}</AccordionContent>
               </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: Do you work with authors in all genres?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: Yes, we work with authors across all genres, though our strongest track record is in business,
-                  self-help, and non-fiction categories. Fiction authors also achieve excellent results with adapted
-                  strategies.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: What's the minimum budget needed for effective book marketing?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: We recommend a minimum monthly marketing budget of $500-1000 for meaningful results, though we can
-                  work with smaller budgets by focusing on the highest-impact strategies first.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: Do you offer guarantees on marketing results?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: While we can't guarantee specific sales numbers due to market variables, we do guarantee our
-                  effort, expertise, and commitment to your success. Most clients see positive ROI within 90 days.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-
-          {/* About Training Programs */}
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-slate-900 mb-4">About Training Programs</h3>
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-5">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: Are the training programs suitable for complete beginners?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: Absolutely. Our programs are designed to take authors from complete beginner to confident marketer,
-                  with step-by-step guidance and ongoing support.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-6">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: Can I access training materials after the program ends?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: Yes, all recorded materials remain accessible for lifetime access, and you maintain community
-                  access for ongoing support and networking.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-7">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: What if I can't attend live sessions?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: All sessions are recorded and available within 24 hours. We also offer makeup sessions and
-                  additional support for participants who miss live sessions.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-
-            {/* About Working Together */}
-            <h3 className="text-xl font-bold text-slate-900 mb-4 mt-8">About Working Together</h3>
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-8">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: How involved do I need to be in the marketing process?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: This depends on your preference and package selection. We offer everything from complete
-                  done-for-you services to guided implementation where you maintain control.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-9">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: Do you work with traditionally published authors?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: Yes, though our strategies are most effective for self-published authors who have control over
-                  their marketing decisions and budgets.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-10">
-                <AccordionTrigger className="text-left text-base font-semibold text-slate-800 hover:text-blue-700">
-                  Q: Can you help with books that are already published?
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-700 leading-relaxed pt-2">
-                  A: Absolutely. Many of our most successful campaigns involve optimizing and relaunching existing books
-                  with improved marketing strategies.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

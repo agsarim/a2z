@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion, AnimatePresence } from "framer-motion"
-import { Bot, Target, CalendarDays, CheckCircle, ArrowRight, BookOpen, ChevronDown, ChevronUp } from "lucide-react"
+import { Bot, Target, CalendarDays, CheckCircle, ArrowRight, BookOpen, ChevronDown, ChevronUp, Youtube } from "lucide-react"
 
 const programs = [
   {
@@ -172,6 +172,8 @@ const programs = [
     nextCohort: "First Tuesday of every month, 2:00 PM EST",
     overview:
       "Stay current with the latest trends and strategies in book marketing through our free monthly webinar series.",
+    ctaUrl: "https://www.youtube.com/watch?v=HBSFFRLZVmI",
+    buttonText: "Watch Free Webinar",
     curriculum: [
       {
         week: "February 2025: 'AI Content Creation for Authors'",
@@ -404,17 +406,45 @@ export function TrainingPrograms() {
                       </AnimatePresence>
                     </div>
 
-                    <Button
-                      size="lg"
-                      className={`w-full ${
-                        program.highlight
-                          ? "bg-white text-blue-600 hover:bg-blue-50"
-                          : "bg-blue-600 hover:bg-blue-700 text-white"
-                      }`}
-                    >
-                      {program.buttonText}
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
+                    {program.ctaUrl ? (
+                      <a href={program.ctaUrl} target="_blank" rel="noopener noreferrer">
+                        <Button
+                          size="lg"
+                          className={`w-full ${
+                            program.highlight
+                              ? "bg-white text-blue-600 hover:bg-blue-50"
+                              : "bg-blue-600 hover:bg-blue-700 text-white"
+                          }`}
+                        >
+                          {program.id === "webinar-series" ? (
+                            <span className="inline-flex items-center justify-center gap-2">
+                              <Youtube className="w-4 h-4" /> {program.buttonText || "Watch Free Webinar"}
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center justify-center gap-2">
+                              {program.buttonText}
+                              <ArrowRight className="w-4 h-4" />
+                            </span>
+                          )}
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button
+                        size="lg"
+                        className={`w-full ${
+                          program.highlight
+                            ? "bg-white text-blue-600 hover:bg-blue-50"
+                            : "bg-blue-600 hover:bg-blue-700 text-white"
+                        }`}
+                      >
+                        {program.buttonText}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Button>
+                    )}
+
+                    {program.id === "webinar-series" && (
+                      <p className="text-xs text-slate-500 text-center mt-2">Opens YouTube in a new tab</p>
+                    )}
                   </div>
                 </CardContent>
               </Card>

@@ -8,21 +8,29 @@ import { useState } from "react"
 const videoTestimonials = [
   {
     id: "video1",
-    title: "Brenda Bence: From Coach to Bestseller",
-    description: "Hear Brenda Bence share her journey to multiple #1 bestseller rankings with our marketing support.",
-    youtubeId: "dQw4w9WgXcQ", // Placeholder YouTube ID
+    title: "Gavin Coyle",
+    description:
+      "Author Gavin Coyle describes How we were able to help his book 'Workplace Safety On A Budget' . Our Marketing Strategy was to focus on Amazon PPC ads and Using Linkedin Ads to reach Health Safety Officials and CEOs / Founders. ",
+    youtubeId: "B3y1zgU45Ps",
   },
   {
     id: "video2",
-    title: "Gavin Coyle: CEO's Guide to Industry Authority",
-    description: "Gavin Coyle discusses how his book became a #1 bestseller and generated significant leads.",
-    youtubeId: "dQw4w9WgXcQ", // Placeholder YouTube ID
+    title: "Byron Tully ",
+    description:
+      "Byron Tully is one of our most successful authors. We have been working with him for more then a year and brought his book to next level by running and optimizing Amazon PPC ads for him.  ",
+    youtubeId: "FU4NZbTWCek",
   },
   {
     id: "video3",
-    title: "Albert Griesmayr: Long-Term Publishing Partnership",
-    description: "Albert Griesmayr on the value of a trusted partner for sustained book marketing success.",
-    youtubeId: "dQw4w9WgXcQ", // Placeholder YouTube ID
+    title: "Leah Gail",
+    description: `Success story from our bestselling author Leah Gail. We made our author Leah Gail a "Bestselling Author" by focusing primarily on Amazon PPC ads and targeting different marketplaces. Her book "Extraordinary Women In History: 70 Remarkable Women Who Made a Difference, Inspired & Broke Barriers" has become a bestseller many times consistently.`,
+    youtubeId: "NzZxVK5cwak",
+  },
+  {
+    id: "video4",
+    title: "Darren",
+    description: `Darren, author of "ONLY for the SERIOUS - PERMANENT Weight Loss", shares his first-hand experience with our expert book marketing services.`,
+    youtubeId: "HRDbtPqZ7nI",
   },
 ]
 

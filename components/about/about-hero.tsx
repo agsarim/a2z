@@ -14,7 +14,7 @@ const quickStats = [
   },
   {
     icon: Users,
-    value: "7,500+",
+    value: "200+",
     label: "Authors Served",
     color: "text-green-500",
   },
@@ -46,25 +46,19 @@ export function AboutHero() {
 
               <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
                 Transforming Authors Into
-                <span className="text-blue-600"> Industry Leaders</span>
+                <span className="text-blue-600"> Market Leaders</span>
               </h1>
 
-              <p className="text-xl text-slate-600 leading-relaxed">Through Strategic Digital Marketing Excellence</p>
+              <p className="text-xl text-slate-600 leading-relaxed">Where Book Marketing Meets Digital Marketing Excellence</p>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
               <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                Syed Saqib Mumtaz Hashmi represents the perfect fusion of technical expertise and marketing mastery in
-                the digital publishing landscape. With over 20 years of experience spanning telecommunications,
-                cybersecurity, and digital marketing, Saqib brings a unique analytical approach to book marketing that
-                consistently delivers bestseller results.
+              Syed Saqib Mumtaz Hashmi blends deep technical expertise with strategic marketing insight to help authors and brands dominate their niches. With over 20 years of experience across telecommunications, cybersecurity, and digital marketing, he brings a data-driven, results-focused approach to the fast-changing world of digital publishing.
               </p>
 
               <p className="text-lg text-slate-700 leading-relaxed">
-                His journey began in the telecommunications industry, where he spent two decades leading major
-                infrastructure and digital transformation projects across government and private sectors. This technical
-                foundation provided him with an unparalleled understanding of digital systems, algorithms, and data
-                analysis - skills that would prove invaluable in mastering the complex world of online book marketing.
+              From leading large-scale infrastructure and digital transformation projects to mastering algorithms, audience targeting, and sales funnels, Saqib’s journey has built the perfect foundation for creating Amazon bestsellers and scaling author brands. His unique mix of analytical precision and creative marketing ensures every campaign is strategically designed, flawlessly executed, and measured for maximum impact.
               </p>
             </div>
 
