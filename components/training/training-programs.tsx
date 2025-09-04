@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion, AnimatePresence } from "framer-motion"
@@ -226,6 +226,11 @@ const programs = [
 export function TrainingPrograms() {
   const [expandedCard, setExpandedCard] = useState<string | null>(null)
   const [isOpen, setIsOpen] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const toggleCard = (cardId: string) => {
     setExpandedCard(expandedCard === cardId ? null : cardId)
@@ -585,12 +590,12 @@ export function TrainingPrograms() {
           ))}
         </div>
       </div>
-      <PopupModal
+      {isClient && <PopupModal
         url="https://calendly.com/saqib-mumtaz"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.body}
-      />
+      />}
     </section>
   )
 }

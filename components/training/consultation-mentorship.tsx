@@ -10,7 +10,7 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { PopupModal } from "react-calendly"
 
 const mentorshipPrograms = [
@@ -50,6 +50,12 @@ const mentorshipPrograms = [
 
 export function ConsultationMentorship() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -197,12 +203,12 @@ export function ConsultationMentorship() {
           ))}
         </div>
       </div>
-      <PopupModal
+      {isClient && <PopupModal
         url="https://calendly.com/saqib-mumtaz"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.body}
-      />
+      />}
     </section>
   )
 }

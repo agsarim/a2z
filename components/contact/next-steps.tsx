@@ -10,13 +10,19 @@ import {
   MessageSquare,
   ArrowRight,
 } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { PopupModal } from "react-calendly"
 
 // A single, unified data structure makes mapping and styling easier
 
 export function NextSteps() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   const nextStepsData = [
     {
       icon: Calendar,
@@ -144,12 +150,12 @@ export function NextSteps() {
           ))}
         </div>
       </div>
-      <PopupModal
+      {isClient && <PopupModal
         url="https://calendly.com/saqib-mumtaz"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.body}
-      />
+      />}
     </section>
   )
 }

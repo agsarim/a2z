@@ -1,11 +1,17 @@
 "use client"
 import { Mail, Phone, MessageCircle, Linkedin, Calendar } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { PopupModal } from "react-calendly"
 
 export function ContactMethods() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   const methods = [
     {
       icon: Calendar,
@@ -76,12 +82,12 @@ export function ContactMethods() {
           ))}
         </div>
       </div>
-      <PopupModal
+      {isClient && <PopupModal
         url="https://calendly.com/saqib-mumtaz"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.body}
-      />
+      />}
     </section>
   )
 }

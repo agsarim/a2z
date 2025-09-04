@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Download, Calendar, Award, Globe, Users } from "lucide-react"
 import Image from "next/image"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { PopupModal } from "react-calendly"
 
 const quickStats = [
@@ -29,6 +29,12 @@ const quickStats = [
 
 export function AboutHero() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="container mx-auto px-4">
@@ -187,12 +193,14 @@ export function AboutHero() {
           </motion.div>
         </div>
       </div>
-      <PopupModal
-        url="https://calendly.com/saqib-mumtaz"
-        onModalClose={() => setIsOpen(false)}
-        open={isOpen}
-        rootElement={document.body}
-      />
+      {isClient && (
+        <PopupModal
+          url="https://calendly.com/saqib-mumtaz"
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={document.body}
+        />
+      )}
     </section>
   )
 }

@@ -1,10 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { PopupModal } from "react-calendly";
 import { Calendar, Clock, ListChecks, CheckCircle2 } from "lucide-react"
 
 export function FreeConsultationDetails() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section className="py-20 bg-slate-50">
       <div className="mx-auto w-full max-w-6xl px-4">
@@ -95,12 +101,12 @@ export function FreeConsultationDetails() {
           </a>
         </div>
       </div>
-      <PopupModal
+      {isClient && <PopupModal
         url="https://calendly.com/saqib-mumtaz"
         onModalClose={() => setIsOpen(false)}
         open={isOpen}
         rootElement={document.body}
-      />
+      />}
     </section>
   )
 }
