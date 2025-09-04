@@ -24,10 +24,8 @@ export function HeroSection() {
       text: "Mumtaz",
       className: "bg-white bg-clip-text text-transparent",
     },
-    {
-      text: "Hashmi",
-      className: "bg-white bg-clip-text text-transparent",
-    },
+ 
+  
   ];
 
   return (
@@ -67,7 +65,7 @@ export function HeroSection() {
               className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-300 text-sm font-medium"
             >
               <Zap className="w-4 h-4" />
-              Syed Saqib Mumtaz Hashmi • Growth Marketer • Publishing Strategist • Trainer
+              Syed Saqib Mumtaz • Growth Marketer • Publishing Strategist • Trainer
             </motion.div>
             {/* Main Headline */}
             <div className="space-y-4">
@@ -176,7 +174,7 @@ export function HeroSection() {
                     src="/images/headshot2-hq.jpg"
                     width={840}
                     height={840}
-                    alt="Saqib Mumtaz Hashmi headshot"
+                    alt="Saqib Mumtaz headshot"
                     className="w-full h-auto object-cover rounded-xl"
                   />
                 </motion.div>

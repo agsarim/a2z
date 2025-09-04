@@ -1,92 +1,155 @@
+'use client'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, Mail, Download, BookOpen, Lightbulb, MessageSquare } from "lucide-react"
+import {
+  Calendar,
+  Mail,
+  Download,
+  BookOpen,
+  Lightbulb,
+  MessageSquare,
+  ArrowRight,
+} from "lucide-react"
+import { useState } from "react"
+import { PopupModal } from "react-calendly"
+
+// A single, unified data structure makes mapping and styling easier
 
 export function NextSteps() {
-  const primary = [
+  const [isOpen, setIsOpen] = useState(false)
+  const nextStepsData = [
     {
       icon: Calendar,
       title: "Schedule your consultation",
-      desc: "Book your strategy session now.",
-      href: "#hero-section-form",
+      desc: "Book a free, no-obligation strategy session to discuss your goals.",
       cta: "Book now",
+      isPrimary: true, // Flag for special styling
+      action: () => setIsOpen(true),
     },
     {
       icon: Mail,
       title: "Join the newsletter",
-      desc: "Weekly tips and insights.",
+      desc: "Get weekly tips and industry insights delivered straight to your inbox.",
       href: "#",
       cta: "Subscribe",
+      isPrimary: true, // Flag for special styling
     },
-  ]
-
-  const more = [
     {
       icon: BookOpen,
       title: "Browse success stories",
-      desc: "See detailed case studies.",
+      desc: "Explore detailed case studies and see the results we've achieved.",
       href: "/success-stories",
       cta: "View stories",
     },
     {
       icon: Lightbulb,
       title: "Explore training",
-      desc: "Programs and workshops.",
+      desc: "Discover our hands-on programs and workshops to upskill your team.",
       href: "/training",
       cta: "Learn more",
     },
     {
       icon: MessageSquare,
       title: "Read testimonials",
-      desc: "Hear from clients.",
+      desc: "Find out what our satisfied clients are saying about their experience.",
       href: "/success-stories#testimonials",
-      cta: "Read",
+      cta: "Read reviews",
     },
-    { icon: Download, title: "Free resources", desc: "Templates and guides.", href: "#", cta: "Get resources" },
+    {
+      icon: Download,
+      title: "Free resources",
+      desc: "Access our library of helpful templates, checklists, and guides.",
+      href: "#",
+      cta: "Get resources",
+    },
   ]
-
   return (
-    <section className="py-20 bg-white">
-      <div className="mx-auto w-full max-w-6xl px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Ready to get started?</h2>
-          <p className="mt-2 text-slate-600">Pick the next step that fits where you are.</p>
+    <section className="py-20 lg:py-24 bg-slate-50">
+      <div className="mx-auto w-full max-w-7xl px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+            Ready to Get Started?
+          </h2>
+          <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+            Whether you're ready to dive in or still exploring, we have a next
+            step for you.
+          </p>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-slate-900">For immediate action</h3>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {primary.map((c, i) => (
-                <div key={i} className="p-6 rounded-xl bg-slate-50 border border-slate-200 text-center">
-                  <c.icon className="h-10 w-10 text-blue-600 mb-3 mx-auto" />
-                  <h4 className="text-lg font-semibold text-slate-900">{c.title}</h4>
-                  <p className="text-sm text-slate-600 mb-4">{c.desc}</p>
-                  <Button asChild variant="outline" className="bg-white">
-                    <Link href={c.href}>{c.cta}</Link>
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
+        {/* A single, balanced grid for all items */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {nextStepsData.map((step, i) => (
+            <div
+              key={i}
+              className={`
+                group p-8 rounded-2xl border flex flex-col transition-all duration-300
+                ${
+                  step.isPrimary
+                    ? "bg-slate-900 border-slate-700 shadow-2xl shadow-slate-900/10"
+                    : "bg-white border-slate-200 hover:shadow-xl hover:border-slate-300 hover:-translate-y-2"
+                }
+              `}
+            >
+              {/* Icon with background */}
+              <div
+                className={`mb-5 w-14 h-14 rounded-xl flex items-center justify-center
+                ${step.isPrimary ? "bg-slate-800" : "bg-blue-50"}
+              `}
+              >
+                <step.icon
+                  className={`h-7 w-7 ${
+                    step.isPrimary ? "text-white" : "text-blue-600"
+                  }`}
+                />
+              </div>
 
-          <div className="space-y-6">
-            <h3 className="text-xl font-bold text-slate-900">For more information</h3>
-            <div className="grid gap-6 sm:grid-cols-2">
-              {more.map((c, i) => (
-                <div key={i} className="p-6 rounded-xl bg-slate-50 border border-slate-200 text-center">
-                  <c.icon className="h-10 w-10 text-blue-600 mb-3 mx-auto" />
-                  <h4 className="text-lg font-semibold text-slate-900">{c.title}</h4>
-                  <p className="text-sm text-slate-600 mb-4">{c.desc}</p>
-                  <Button asChild variant="outline" className="bg-white">
-                    <Link href={c.href}>{c.cta}</Link>
-                  </Button>
-                </div>
-              ))}
+              {/* Text content with flex-grow to push button to the bottom */}
+              <div className="flex-grow">
+                <h3
+                  className={`text-xl font-bold ${
+                    step.isPrimary ? "text-white" : "text-slate-900"
+                  }`}
+                >
+                  {step.title}
+                </h3>
+                <p
+                  className={`mt-2 text-sm leading-relaxed ${
+                    step.isPrimary ? "text-slate-400" : "text-slate-600"
+                  }`}
+                >
+                  {step.desc}
+                </p>
+              </div>
+
+              {/* CTA Button */}
+              <Button
+                asChild={!!step.href}
+                onClick={step.action}
+                variant={step.isPrimary ? "default" : "secondary"}
+                className="mt-6 w-full"
+              >
+                {step.href ? (
+                  <Link href={step.href}>
+                    {step.cta}
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                ) : (
+                  <>
+                    {step.cta}
+                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  </>
+                )}
+              </Button>
             </div>
-          </div>
+          ))}
         </div>
       </div>
+      <PopupModal
+        url="https://calendly.com/saqib-mumtaz"
+        onModalClose={() => setIsOpen(false)}
+        open={isOpen}
+        rootElement={document.body}
+      />
     </section>
   )
 }

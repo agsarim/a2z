@@ -1,6 +1,10 @@
+"use client";
+import { useState } from "react";
+import { PopupModal } from "react-calendly";
 import { Calendar, Clock, ListChecks, CheckCircle2 } from "lucide-react"
 
 export function FreeConsultationDetails() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section className="py-20 bg-slate-50">
       <div className="mx-auto w-full max-w-6xl px-4">
@@ -81,11 +85,9 @@ export function FreeConsultationDetails() {
         </div>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="#hero-section-form" className="inline-block">
-            <button className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">
+            <button onClick={() => setIsOpen(true)} className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">
               Book your free consult
             </button>
-          </a>
           <a href="/success-stories" className="inline-block">
             <button className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-6 py-3 text-slate-700 font-semibold hover:bg-slate-100 transition-colors bg-white">
               See case studies
@@ -93,6 +95,12 @@ export function FreeConsultationDetails() {
           </a>
         </div>
       </div>
+      <PopupModal
+        url="https://calendly.com/saqib-mumtaz"
+        onModalClose={() => setIsOpen(false)}
+        open={isOpen}
+        rootElement={document.body}
+      />
     </section>
   )
 }

@@ -95,7 +95,7 @@ export function AboutPreview() {
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <Image
                   src="/images/headshot9.jpg"
-                  alt="Syed Saqib Mumtaz Hashmi - Digital Marketing Expert"
+                  alt="Syed Saqib Mumtaz - Digital Marketing Expert"
                   width={400}
                   height={400}
                   className="w-full h-auto rounded-lg"

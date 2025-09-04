@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import { CalendarDays, Clock, MapPin } from "lucide-react"
 import Image from "next/image"
+import { useState } from "react"
+import { PopupModal } from "react-calendly"
 
 const upcomingEvents = [
   {
@@ -41,6 +43,7 @@ const upcomingEvents = [
 ]
 
 export function WorkshopCalendar() {
+  const [isOpen, setIsOpen] = useState(false)
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -64,7 +67,7 @@ export function WorkshopCalendar() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Left: Calendar Visualization (Simplified) */}
+          {/* Left: Calendar Visualization with Calendly Integration */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -72,25 +75,22 @@ export function WorkshopCalendar() {
             className="relative"
           >
             <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-purple-50 p-8">
-              <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Interactive Calendar View</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">Book Your Session</h3>
               <div className="relative bg-white rounded-lg shadow-md p-6 aspect-video flex items-center justify-center">
-                <Image
-                  src="/placeholder.svg?height=400&width=600"
-                  alt="Interactive calendar showing upcoming workshop dates"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover rounded-md opacity-80"
-                  unoptimized
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-slate-700 font-semibold text-lg">
-                    <CalendarDays className="w-12 h-12 mx-auto mb-4 text-blue-600" />
-                    <p>Click to view full interactive calendar</p>
-                  </div>
+                <div className="text-center">
+                  <CalendarDays className="w-16 h-16 mx-auto mb-4 text-blue-600" />
+                  <h4 className="text-xl font-semibold text-slate-900 mb-2">Ready to Get Started?</h4>
+                  <p className="text-slate-600 mb-4">Schedule a free consultation to discuss your training needs</p>
+                  <button 
+                    onClick={() => setIsOpen(true)}
+                    className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    View Calendar & Book Session
+                  </button>
                 </div>
               </div>
               <p className="text-center text-slate-600 text-sm mt-4">
-                A visual representation of our dynamic workshop schedule.
+                Or <a href="/contact" className="text-blue-600 hover:underline font-medium">contact us directly</a> for more options
               </p>
             </Card>
           </motion.div>
@@ -141,6 +141,12 @@ export function WorkshopCalendar() {
           </motion.div>
         </div>
       </div>
+      <PopupModal
+        url="https://calendly.com/saqib-mumtaz"
+        onModalClose={() => setIsOpen(false)}
+        open={isOpen}
+        rootElement={document.body}
+      />
     </section>
   )
 }

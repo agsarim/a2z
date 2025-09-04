@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
 import { Heart, Target, Users, Lightbulb, ArrowRight, Calendar } from "lucide-react"
 
+
 const coreValues = [
   {
     icon: Lightbulb,
@@ -71,15 +72,22 @@ export function PersonalMission() {
             className="space-y-8"
           >
             <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-2xl p-8">
-              <blockquote className="text-xl leading-relaxed text-slate-200 italic mb-6">
-                "My mission is to democratize bestseller success by making advanced digital marketing strategies
-                accessible to every author, regardless of their technical background or marketing budget. Through
-                AI-powered tools and proven methodologies, I believe every author with a valuable message deserves the
-                opportunity to reach their ideal audience and achieve marketplace success."
-              </blockquote>
+              <div className="text-xl leading-relaxed text-slate-200 mb-6 space-y-6">
+                <p>
+                  My mission is to make publishing success and powerful digital marketing accessible to everyone.
+                  Whether it’s turning a book into a bestseller, building a personal brand, or scaling a business
+                  through smart campaigns, we believe advanced strategies should not be limited by budget or technical
+                  expertise.
+                </p>
+                <p>
+                  By combining AI-powered tools, proven publishing methods, and data-driven marketing, every author,
+                  professional, and brand with a valuable message deserves the chance to reach the right audience, grow
+                  their influence, and achieve lasting marketplace success.
+                </p>
+              </div>
               <div className="text-right">
-                <div className="text-blue-400 font-semibold">— Syed Saqib Mumtaz Hashmi</div>
-                <div className="text-slate-400 text-sm">Founder & CEO, A2ZPublishing</div>
+                <div className="text-blue-400 font-semibold">Syed Saqib Mumtaz</div>
+                <div className="text-slate-400 text-sm">— Founder & CEO, <em>A2ZPublishing</em></div>
               </div>
             </div>
 

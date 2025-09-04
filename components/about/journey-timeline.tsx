@@ -66,11 +66,10 @@ export function JourneyTimeline() {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
           Two Decades Focused on 
-            <span className="text-purple-600"> Driving Your Success</span>
+            <span className="text-purple-600"> Your Success</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-          From building large-scale digital systems to mastering AI-powered marketing, my journey has been about one thing—developing the skills and strategies that help authors and brands launch faster, grow bigger, and win consistently.
-          </p>
+From building enterprise-level digital systems to mastering AI-driven marketing and cross-platform PPC ads, the focus has always been the same — helping authors, businesses, and personal brands stand out, scale up, and achieve measurable results.          </p>
         </motion.div>
 
         <div className="relative">

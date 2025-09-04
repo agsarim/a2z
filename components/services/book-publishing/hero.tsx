@@ -33,14 +33,13 @@ export function BookPublishingHero() {
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                From Manuscript to Marketplace: Professional Publishing That Positions You for{" "}
+                From Overwhelmed to Published: {" "}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Success
+                  Stress-Free Publishing
                 </span>
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
-              We handle the technical details of professional publishing so you can focus on what matters most: sharing your message with the world.
-              </p>
+Tired of confusing platforms, formatting issues, and wasted time on technical hurdles? We take care of the publishing  so that you can focus on what really matters — building your brand, growing your audience, and sharing your message with the world.              </p>
             </div>
 
 

@@ -4,6 +4,7 @@ import { CaseStudiesSection } from "@/components/success-stories/case-studies-se
 import { ClientBooksGallery } from "@/components/success-stories/client-books-gallery"
 import { VideoTestimonialsSection } from "@/components/success-stories/video-testimonials-section"
 import { CtaSection } from "@/components/services/digital-marketing/cta-section" // Reusing existing CTA
+import {TestimonialsCarousel} from "@/components/testimonials-carousel"
 
 export default function SuccessStoriesPage() {
   return (
@@ -11,6 +12,7 @@ export default function SuccessStoriesPage() {
       <HeroSection />
       <MetricsSection />
       <CaseStudiesSection />
+      <TestimonialsCarousel />
       <ClientBooksGallery />
       <VideoTestimonialsSection />
       <CtaSection />

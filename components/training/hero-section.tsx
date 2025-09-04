@@ -55,7 +55,11 @@ export function HeroSection() {
                 <BookOpen className="mr-2 w-5 h-5" />
                 Explore Training Programs
               </Button>
-            
+              <a href="/contact" className="inline-block">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold">
+                  Book Free Consultation
+                </Button>
+              </a>
             </div>
           </motion.div>
 

@@ -13,8 +13,8 @@ export default function BookPublishingPage() {
       <BookPublishingContent />
       <PublishingPricingPackages />
       <PublishingProcessWorkflow />
-      <QualityShowcase />
-      <PublishingPartners />
+      {/* <QualityShowcase />
+      <PublishingPartners /> */}
       <CtaSection />
     </main>
   )

@@ -88,6 +88,30 @@ export function LearningOutcomes() {
             </motion.div>
           ))}
         </div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-16"
+        >
+          <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Start Your Journey?</h3>
+          <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+            Take the first step toward mastering AI-powered book marketing. Book a free consultation to discuss your specific goals and find the perfect training program for you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="inline-block">
+              <button className="inline-flex items-center justify-center rounded-lg bg-green-600 px-8 py-3 text-white font-semibold hover:bg-green-700 transition-colors">
+                Book Free Consultation
+              </button>
+            </a>
+            <a href="tel:+92-XXX-XXXXXXX" className="inline-block">
+              <button className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-8 py-3 text-slate-700 font-semibold hover:bg-slate-100 transition-colors bg-white">
+                Call Now
+              </button>
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

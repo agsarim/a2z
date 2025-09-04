@@ -7,6 +7,7 @@ import { GlobalPresence } from "@/components/global-presence"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, Boxes, Rocket, Sparkles, Wrench } from "lucide-react"
+import {TestimonialsCarousel} from "@/components/testimonials-carousel"
 
 function SectionDivider() {
   return (
@@ -142,7 +143,8 @@ export default function HomePage() {
       <SectionDivider />
       <ServicesPreview />
       <SectionDivider />
-      <FeaturedSuccess />
+      {/* <FeaturedSuccess /> */}
+      <TestimonialsCarousel />
       <SectionDivider />
       <StatsSection />
       <SignaturePlaybooks />

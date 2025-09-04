@@ -15,27 +15,33 @@ export function BookPublishingContent() {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-6">
-              Your Publishing Journey Simplified
-            </h2>
+Publishing Made Simple, Profitable, and Professional            </h2>
             <p className="text-lg text-slate-600 leading-relaxed">
-              The journey from completed manuscript to published book can feel overwhelming, especially when you're
-              navigating the complex landscape of modern publishing options. Traditional publishing routes often involve
-              lengthy delays, limited creative control, and reduced profit margins, while self-publishing can seem
-              technically daunting for authors who want to focus on writing rather than learning complex publishing
-              systems.
+              Finishing a manuscript is hard enough — turning it into a published book shouldn’t feel overwhelming.
+              Traditional publishing can mean <span className="font-semibold text-slate-700">long delays, less creative control, and lower profits</span>, while
+              self-publishing often demands{" "}
+              <span className="font-semibold text-slate-700">time-consuming technical work</span> authors shouldn’t
+              have to struggle with.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              Our comprehensive publishing services bridge this gap by providing professional-grade publishing
-              support that maintains your creative control and profit margins while ensuring your book meets the highest
-              industry standards.
+              That’s where we come in. Our{" "}
+              <span className="font-semibold text-blue-600">end-to-end publishing services</span> give you the best of
+              both worlds —{" "}
+              <span className="font-semibold text-blue-600">
+                professional quality, full creative control, and higher profit margins
+              </span>{" "}
+              — without the stress of managing complex systems on your own.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed">
-              We've successfully published over <span className="font-semibold text-blue-600">7,500 authors</span> across{" "}
-              <span className="font-semibold text-blue-600">91 countries</span>, creating books
-              that not only look professional but are strategically positioned for marketplace success from day one.
+              With over <span className="font-semibold text-blue-600">300+ authors published across the globe</span>,
+              we’ve helped writers transform manuscripts into books that not only look world-class but are also{" "}
+              <span className="font-semibold text-blue-600">
+                strategically positioned for marketplace success from day one
+              </span>
+              .
             </p>
           </div>
         </motion.div>

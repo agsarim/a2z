@@ -1,3 +1,5 @@
+"use client";
+import { InlineWidget } from "react-calendly";
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -35,67 +37,14 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right: Contact Form */}
+          {/* Right: Calendly Embed */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
             <div className="space-y-6">
               <div className="text-center">
-                <h2 className="text-2xl font-semibold text-white mb-2">Get Started</h2>
-                <p className="text-slate-300">Fill out the form below to schedule your consultation</p>
+                <h2 className="text-2xl font-semibold text-white mb-2">Schedule a Consultation</h2>
+                <p className="text-slate-300">Choose a time that works for you from the calendar below.</p>
               </div>
-
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name" className="text-white text-sm font-medium">
-                      Name
-                    </Label>
-                    <Input
-                      id="name"
-                      placeholder="Your name"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 focus:ring-blue-400/20"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-white text-sm font-medium">
-                      Email
-                    </Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your@email.com"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 focus:ring-blue-400/20"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="book" className="text-white text-sm font-medium">
-                    Book Title & Genre
-                  </Label>
-                  <Input
-                    id="book"
-                    placeholder="e.g., The Great Novel, Fiction"
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 focus:ring-blue-400/20"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="goals" className="text-white text-sm font-medium">
-                    Your Goals
-                  </Label>
-                  <Textarea
-                    id="goals"
-                    placeholder="What would you like to achieve with your book?"
-                    rows={3}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-slate-400 focus:border-blue-400 focus:ring-blue-400/20 resize-none"
-                  />
-                </div>
-
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 transition-colors">
-                  <Mail className="h-4 w-4 mr-2" />
-                  Schedule Consultation
-                </Button>
-              </form>
+              <InlineWidget url="https://calendly.com/saqib-mumtaz" />
             </div>
           </div>
         </div>

@@ -72,10 +72,12 @@ export function ServicesPreview() {
             What I do
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-          "Tired of marketing plans that never get off the ground? I build practical strategies, done-for-you systems, and hands-on guidance—so your books and brand don’t just launch, they grow and keep winning."
+                        Practical strategy, built-for-you systems, and hands-on enablement—so you can launch, grow, and lead.
+
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Practical strategy, built-for-you systems, and hands-on enablement—so you can launch, grow, and lead.
+                      "Tired of marketing plans that never get off the ground? I build practical strategies, done-for-you systems, and hands-on guidance—so your books and brand don’t just launch, they grow and keep winning."
+
           </p>
         </motion.div>
 

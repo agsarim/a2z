@@ -1,14 +1,26 @@
-import { Mail, Phone, MessageCircle, Linkedin } from "lucide-react"
+"use client"
+import { Mail, Phone, MessageCircle, Linkedin, Calendar } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { useState } from "react"
+import { PopupModal } from "react-calendly"
 
 export function ContactMethods() {
+  const [isOpen, setIsOpen] = useState(false)
   const methods = [
+    {
+      icon: Calendar,
+      title: "Book Free Consultation",
+      value: "Schedule instantly",
+      meta: "60-min strategy session",
+      primary: true,
+      action: "calendly",
+    },
     {
       icon: Mail,
       title: "Email",
       value: "saqib@a2zpublishing.com",
       meta: "Response within 24 hours",
-      primary: true,
+      primary: false,
     },
     {
       icon: Phone,
@@ -43,11 +55,12 @@ export function ContactMethods() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5 max-w-5xl mx-auto">
           {methods.map((method, index) => (
             <Card
               key={index}
-              className={`text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${method.primary ? "ring-2 ring-blue-200 bg-blue-50" : ""}`}
+              className={`text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${method.primary ? "ring-2 ring-blue-200 bg-blue-50" : ""} ${method.action === "calendly" ? "cursor-pointer" : ""}`}
+              onClick={method.action === "calendly" ? () => setIsOpen(true) : undefined}
             >
               <CardContent className="p-6">
                 <div
@@ -63,6 +76,12 @@ export function ContactMethods() {
           ))}
         </div>
       </div>
+      <PopupModal
+        url="https://calendly.com/saqib-mumtaz"
+        onModalClose={() => setIsOpen(false)}
+        open={isOpen}
+        rootElement={document.body}
+      />
     </section>
   )
 }

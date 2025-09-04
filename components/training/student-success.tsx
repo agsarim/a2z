@@ -109,6 +109,34 @@ export function StudentSuccess() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 lg:p-12"
+        >
+          <h3 className="text-3xl font-bold text-slate-900 mb-4">Ready to Write Your Success Story?</h3>
+          <p className="text-slate-600 mb-8 max-w-2xl mx-auto text-lg">
+            Join hundreds of authors who have transformed their book marketing with our proven AI-powered strategies. 
+            Your success story could be next.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="inline-block">
+              <button className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3 text-white font-semibold hover:bg-blue-700 transition-colors">
+                Start Your Journey
+              </button>
+            </a>
+            <a href="/contact" className="inline-block">
+              <button className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-8 py-3 text-slate-700 font-semibold hover:bg-slate-100 transition-colors bg-white">
+                Schedule Free Consultation
+              </button>
+            </a>
+          </div>
+          <p className="text-sm text-slate-500 mt-4">
+            Prefer to chat? <a href="tel:+92-XXX-XXXXXXX" className="text-blue-600 hover:underline">Call us directly</a> or <a href="mailto:saqib@a2zpublishing.com" className="text-blue-600 hover:underline">email us</a>
+          </p>
+        </motion.div>
       </div>
     </section>
   )

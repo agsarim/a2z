@@ -7,56 +7,33 @@ import { CheckCircle, DollarSign } from "lucide-react"
 
 const pricingTiers = [
   {
-    name: "Starter Publishing Package",
-    perfectFor: "First-time authors and budget-conscious writers",
-    investment: "$497",
+    name: "Free Consultancy",
+    perfectFor: "Quick insights and to see if we're a good fit",
+    investment: "Free",
     whatsIncluded: [
-      "Professional Manuscript Formatting: Interior layout design optimized for both print and digital formats",
-      "Basic Cover Design: Eye-catching cover that follows genre conventions and marketplace best practices",
-      "ISBN Assignment: Professional ISBN registration for your book",
-      "Amazon KDP Setup: Complete account setup and book listing optimization",
-      "Basic SEO Optimization: Keyword-optimized title, subtitle, and description for improved discoverability",
-      "Distribution Setup: Publication across major platforms including Amazon, Barnes & Noble, and Apple Books",
+      "30-minute discovery call",
+      "Initial assessment of your goals",
+      "Brief overview of potential strategies",
+      "Q&A session to address your top questions",
     ],
-    timeline: "2-3 weeks from manuscript submission to publication",
-    buttonText: "Get Started",
+    timeline: "30 minutes",
+    buttonText: "Book a Free Call",
     highlight: false,
   },
   {
-    name: "Professional Publishing Package",
-    perfectFor: "Serious authors building a long-term publishing business",
-    investment: "$997",
+    name: "1-Hour Consultancy",
+    perfectFor: "In-depth strategy and actionable advice",
+    investment: "$160",
     whatsIncluded: [
-      "Everything in Starter Package, Plus:",
-      "Premium Cover Design: Custom cover design with multiple concepts and revisions",
-      "Advanced Formatting: Enhanced interior design with custom chapter headers and professional typography",
-      "Comprehensive SEO Strategy: In-depth keyword research and optimization across all book metadata",
-      "Multi-Format Publishing: Ebook, paperback, and hardcover editions",
-      "Extended Distribution: Publication across 40+ global platforms and bookstores",
-      "Author Website Setup: Basic author website with book showcase and contact information",
-      "Launch Strategy Consultation: 1-hour strategy session for optimal book launch timing and approach",
+      "60-minute deep-dive strategy session",
+      "Detailed analysis of your project or brand",
+      "Actionable roadmap with next steps",
+      "Personalized recommendations for tools and resources",
+      "Follow-up email with key takeaways",
     ],
-    timeline: "3-4 weeks from manuscript submission to publication",
-    buttonText: "Choose Plan",
+    timeline: "1 hour",
+    buttonText: "Book a Session",
     highlight: true,
-  },
-  {
-    name: "Bestseller Publishing Package",
-    perfectFor: "Authors serious about achieving bestseller status and building authority",
-    investment: "$1,997",
-    whatsIncluded: [
-      "Everything in Professional Package, Plus:",
-      "Premium Design Suite: Custom cover design, interior formatting, and branded marketing materials",
-      "Comprehensive Market Analysis: Detailed competitor research and market positioning strategy",
-      "Advanced SEO & Metadata Optimization: Professional copywriting for all book descriptions and metadata",
-      "Multi-Language Considerations: Formatting and setup for potential international markets",
-      "Author Brand Development: Professional author bio, headshots coordination, and brand messaging",
-      "Launch Campaign Planning: Detailed 90-day launch strategy with marketing calendar",
-      "Ongoing Support: 3 months of post-publication support and optimization",
-    ],
-    timeline: "4-6 weeks from manuscript submission to publication",
-    buttonText: "Contact for Enterprise",
-    highlight: false,
   },
 ]
 
@@ -74,17 +51,17 @@ export function PublishingPricingPackages() {
             <DollarSign className="w-4 h-4" />
             Flexible Pricing
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Complete Publishing
-            <span className="text-blue-600"> Packages</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">            
+            Consultancy
+            <span className="text-blue-600"> Options</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Choose the package that best fits your publishing goals, from foundational support to comprehensive
-            bestseller positioning.
+            Choose the consultancy option that best fits your needs, from a quick chat to a deep-dive strategy
+            session.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <motion.div
               key={index}
