@@ -125,12 +125,12 @@ export function HeroSection() {
             >
               <div className="flex items-center gap-4 text-slate-300">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link href="https://www.linkedin.com" target="_blank" className="hover:text-white transition-colors">
+                  <Link href="https://www.linkedin.com/in/syed-saqib-mumtaz-hashmi-bookmarketing/" target="_blank" className="hover:text-white transition-colors">
                     <span className="inline-flex items-center gap-2"><Linkedin className="w-5 h-5" /> LinkedIn</span>
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link href="https://www.youtube.com" target="_blank" className="hover:text-white transition-colors">
+                  <Link href="https://www.amazonkdp101.com" target="_blank" className="hover:text-white transition-colors">
                     <span className="inline-flex items-center gap-2"><Youtube className="w-5 h-5" /> YouTube</span>
                   </Link>
                 </motion.div>
