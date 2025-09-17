@@ -6,83 +6,10 @@ import { Button } from "@/components/ui/button"
 import { TrendingUp, Star, Quote, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
 import Image from "next/image"
 import { useState, useEffect } from "react"
+import { testimonials } from "@/components/testimonials-data"
 
-const testimonials = [
-  {
-    name: "Daniel Jackman",
-    title:
-      "Certified Chair, Entrepreneur with multi-national company experience | Board member/Independent Director | Finance expert",
-    linkedin: "https://www.linkedin.com/in/daniel-jackman-03956b2/",
-    service: "Marketing Consulting",
-    rating: 5.0,
-    date: "July 14, 2025",
-    testimonial:
-      "We have worked with Syed for over 3 years. His work specializes on Amazon ads for our English, German and Spanish language editions in multiple Amazon markets. If you publish your books on Amazon, Syed can help you market your books effectively to reach a great audience and thus greater sales.",
-    avatar: "/images/male.png",
-  },
-  {
-    name: "Yasmin Elahi",
-    title: "Author",
-    linkedin: "https://www.linkedin.com/in/yasmin-elahi-a7421151/",
-    service: "Social Media Marketing",
-    rating: 5.0,
-    date: "November 7, 2023",
-    testimonial:
-      "It was really a pleasure to interact with Syed Saqib Mumtaz. He knows his job well, is polite, patient and very Cooperative. I had approached him for the Promotion of my book on Facebook and the way he guided me was beyond excellent. Saqib is a valuable name in the field of promoting reading and guiding writers to strive for excellence. I will highly recommend him if you want value for your money.",
-    avatar: "/images/male.png",
-  },
-  {
-    name: "Kévin Romanteau",
-    title: "Event-Driven | Investor | Finance Author",
-    linkedin: "https://www.linkedin.com/in/kevinromanteau/",
-    service: "Marketing Strategy",
-    rating: 5.0,
-    date: "August 19, 2023",
-    testimonial:
-      "I had the pleasure to counsel Syed for launching my book and can confidently say that he is dedicated and well-qualified.",
-    avatar: "/images/male.png",
-  },
-  {
-    name: "Gavin Coyle CMIOSH I MBS",
-    title:
-      "CEO I Safety Recruitment Specialist & Business Expert | Podcast Host at I'm the Gaffer Construction Business Podcast | Board Advisor & Thought leader | Amazon Author | EHS software shareholder",
-    linkedin: "https://www.linkedin.com/in/gavincoyleceo/",
-    service: "Digital Marketing",
-    rating: 5.0,
-    date: "January 20, 2023",
-    testimonial:
-      "Syed is amazing, he is a true expert in his field. He is always available and makes great recommendations to help make your book No 1 in its category. He also plays a vital role in managing how your book receives traffic to amazon. Highly recommended",
-       avatar: "/images/male.png",
 
-  },
-  {
-    name: "Brenda Bence",
-    title:
-      "High-Stakes C-Suite Succession & Leadership Coach/Advisor | Trusted by Boards, CEOs & ELTs of the World's Most Influential Corporations | Experience Across 6 Continents | Harvard MBA",
-    linkedin: "https://www.linkedin.com/in/brendabence/",
-    service: "Digital Marketing",
-    rating: 5.0,
-    date: "November 20, 2022",
-    testimonial:
-      "I have worked with Syed for the past year, as he helped me advertise one of our books on Amazon. Syed was devoted to doing what he could to help the book achieve good sales. In terms of actual sales revenues, there were ups and downs throughout the year - and Syed had warned me that would likely be the case. But now, the year of focus and attention has paid off, and the book has achieved strong sales and multiple bestseller status. I am grateful to Syed for his attention and suggestions!",
-    avatar: "/images/male.png",
-
-  },
-  {
-    name: "Leah Stockford",
-    title: "Music Marketing Consultant / Author",
-    linkedin: "https://www.linkedin.com/in/leah-stockford-1459ab71/",
-    service: "Digital Marketing",
-    rating: 5.0,
-    date: "November 13, 2022",
-    testimonial:
-      "Have been working with Saqib for over a year now on Amazon Advertising for my books. Saqib has helped me become a number 1 bestseller frequently and continue to help grow my business. Would highly recommend.",
-        avatar: "/images/male.png",
-
-  },
-]
-
-export  function TestimonialsCarousel() {
+export function TestimonialsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 

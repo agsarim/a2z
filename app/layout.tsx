@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   title: "Saqib Mumtaz - Transform Your Book Into a Bestseller",
   description:
     "Join 7,500+ authors who have achieved bestseller status through our proven AI-powered digital marketing strategies. Expert book publishing and marketing services.",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -22,7 +23,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navigation />
-        <div className="pt-20">{children}</div>
+        <div className="flex min-h-screen flex-col">
+          <main className="flex-1 pt-20">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   )

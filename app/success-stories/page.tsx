@@ -10,11 +10,13 @@ export default function SuccessStoriesPage() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <MetricsSection />
+            <VideoTestimonialsSection />
+
+    
       <CaseStudiesSection />
       <TestimonialsCarousel />
       <ClientBooksGallery />
-      <VideoTestimonialsSection />
+        <MetricsSection />
       <CtaSection />
     </main>
   )

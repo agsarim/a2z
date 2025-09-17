@@ -9,7 +9,7 @@ import { Mail, Calendar, MessageSquare } from "lucide-react"
 export function HeroSection() {
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-10" />
+      <div className="absolute inset-0 bg-gradient-radial from-sky-900 to-slate-900 bg-cover bg-center opacity-10" />
 
       <div className="container relative z-10 mx-auto px-4">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">

@@ -72,14 +72,14 @@ export function StudentSuccess() {
                   <div className="space-y-6">
                     {/* Client Header */}
                     <div className="flex items-start gap-4">
-                      <Image
+                      {/* <Image
                         src={testimonial.image || "/placeholder.svg"}
                         alt={testimonial.name}
                         width={80}
                         height={80}
                         className="rounded-full object-cover"
                         unoptimized
-                      />
+                      /> */}
                       <div>
                         <h3 className="text-xl font-bold text-slate-900">{testimonial.name}</h3>
                         <p className="text-slate-600">{testimonial.title}</p>

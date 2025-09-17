@@ -7,18 +7,29 @@ import { Brain, Target, BarChart3, Zap, Shield, Globe } from "lucide-react"
 const expertiseAreas = [
   {
     icon: Brain,
-    title: "AI-Assisted Marketing",
-    description: "ChatGPT, Gemini, MidJourney implementation for content creation and campaign optimization",
-    skills: ["Content Generation", "Visual Design", "Campaign Automation", "Performance Analysis"],
+    title: "Smarter, AI-Assisted Marketing",
+    description:
+      "By leveraging tools like ChatGPT, MAUNS, Gemini, and MidJourney, Saqib ensures faster, more effective, campaign optimization, and visual branding.",
+    skills: [
+      "Personal Branding & Thought Leadership (LinkedIn, Websites)",
+      "Content Calender Generation & Visual Design",
+      "Campaign Automation & Performance Analysis",
+    ],
     color: "from-blue-500 to-cyan-500",
     bgColor: "bg-blue-50",
     iconColor: "text-blue-600",
   },
   {
     icon: Target,
-    title: "Amazon Algorithm Mastery",
-    description: "Deep understanding of A10 algorithm, PPC optimization, and ranking strategies",
-    skills: ["PPC Management", "SEO Optimization", "Keyword Research", "Category Strategy"],
+    title: "PPC & Growth Strategies That Deliver",
+    description:
+      "From Amazon PPC ads that create bestsellers to Google, LinkedIn, and Facebook campaigns that drive qualified leads, Saqib specializes in maximizing ROI and minimizing wasted spend.",
+    skills: [
+      "PPC Management (Amazon, Google, LinkedIn, Facebook)",
+      "SEO Optimization & Keyword Research for Books",
+      "Category Strategy & Positioning",
+      "Lead Generation Funnels & Email Marketing",
+    ],
     color: "from-green-500 to-emerald-500",
     bgColor: "bg-green-50",
     iconColor: "text-green-600",
@@ -26,7 +37,7 @@ const expertiseAreas = [
   {
     icon: BarChart3,
     title: "Data Analysis & ROI",
-    description: "Performance tracking, market research, and data-driven decision making",
+    description: "Performance tracking, market research, and data-driven decision making to ensure every campaign delivers measurable results.",
     skills: ["Analytics Setup", "Performance Tracking", "ROI Optimization", "Market Research"],
     color: "from-purple-500 to-pink-500",
     bgColor: "bg-purple-50",
@@ -35,25 +46,16 @@ const expertiseAreas = [
   {
     icon: Globe,
     title: "Cross-Platform Marketing",
-    description: "Integrated marketing campaigns across multiple digital platforms",
+    description: "Integrated marketing campaigns across Amazon, Google, LinkedIn, Facebook, and email to maximize visibility and lead generation.",
     skills: ["Social Media Strategy", "Email Marketing", "Content Distribution", "Brand Building"],
     color: "from-orange-500 to-red-500",
     bgColor: "bg-orange-50",
     iconColor: "text-orange-600",
   },
   {
-    icon: Shield,
-    title: "Cybersecurity Insights",
-    description: "Digital security expertise applied to marketing strategy and platform safety",
-    skills: ["Platform Security", "Data Protection", "Risk Assessment", "Compliance"],
-    color: "from-slate-500 to-gray-500",
-    bgColor: "bg-slate-50",
-    iconColor: "text-slate-600",
-  },
-  {
     icon: Zap,
     title: "Technical Innovation",
-    description: "Telecommunications background enabling advanced technical marketing solutions",
+    description: "A strong technical background applied to modern marketing — using automation, system integration, and innovative strategies to scale results.",
     skills: ["System Integration", "Automation", "Technical Strategy", "Innovation"],
     color: "from-yellow-500 to-amber-500",
     bgColor: "bg-yellow-50",
@@ -76,10 +78,16 @@ export function ExpertiseShowcase() {
             Core Expertise
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-          Solving Your Biggest             <span className="text-blue-600"> Book Marketing Challenges</span>
+            Solving <span className="text-blue-600">Marketing & Branding Challenges</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-          Struggling to get your book noticed or turn clicks into sales? My 20 years of technical expertise and proven marketing strategies work together to cut through the noise, reach the right readers, and drive measurable results in the digital publishing space.          </p>
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            Authors, entrepreneurs, and professionals often face the same struggle — getting noticed, standing out in
+            competitive markets, and turning clicks into real sales or clients. Too often, time and money are lost on
+            campaigns that fail to deliver.<br /><br />
+            Syed Saqib Mumtaz provides the solution. With over 20 years of technical expertise and digital
+            marketing experience, he helps clients cut through the noise, connect with their audience, and achieve
+            measurable growth.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -109,7 +117,7 @@ export function ExpertiseShowcase() {
                     {/* Skills */}
                     <div className="space-y-3">
                       <div className="text-sm font-semibold text-slate-700">Key Skills:</div>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {area.skills.map((skill, skillIndex) => (
                           <div key={skillIndex} className="flex items-center gap-2">
                             <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>

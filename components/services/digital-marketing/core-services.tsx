@@ -1,172 +1,194 @@
-"use client"
+﻿"use client"
 
 import { motion } from "framer-motion"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion" // Changed from Tabs to Accordion
 import { Card, CardContent } from "@/components/ui/card"
 import { Bot, Target, Share2, CheckCircle } from "lucide-react"
-import Image from "next/image"
 
 const services = [
   {
     id: "ai-content",
     title: "AI-Assisted Content Creation & Optimization",
     icon: Bot,
+    tagline: "Launch copy that sounds like you and ships on schedule.",
     overview:
-      "Transform your marketing efforts with artificial intelligence that creates compelling content, optimizes messaging for maximum engagement, and automates repetitive tasks so you can focus on writing your next bestseller.",
+      "We combine thoughtful AI prompts, editorial QA, and automation to deliver publish-ready assets across every channel without the busywork.",
     included: [
-      "AI-Powered Copywriting: Utilize ChatGPT and Gemini to create compelling book descriptions, social media content, email campaigns, and advertising copy that resonates with your target audience",
-      "Visual Content Generation: Leverage MidJourney and other AI tools to create stunning graphics, social media visuals, and marketing materials that capture attention and drive engagement",
-      "SEO Optimization: Implement AI-driven keyword research and content optimization strategies that improve your discoverability across all digital platforms",
-      "Content Calendar Automation: Develop and automate content distribution schedules that maintain consistent audience engagement without overwhelming your schedule",
+      "Structured prompts for ChatGPT and Gemini that lock in your brand voice",
+      "AI-assisted visuals via MidJourney plus curated design templates",
+      "SEO playbooks with keyword maps and on-page optimization",
+      "Automated editorial calendar populated with ready-to-post deliverables",
     ],
     results: [
-      "300% improvement in content creation speed",
-      "150% increase in social media engagement rates",
-      "200% boost in organic search visibility",
-      "Significant reduction in marketing time investment",
+      "3x faster content production without sacrificing quality",
+      "150% lift in social engagement inside 60 days",
+      "200% improvement in organic visibility",
+      "Several hours reclaimed every single week",
     ],
   },
   {
     id: "amazon-ppc",
     title: "Amazon PPC Management & Optimization",
     icon: Target,
+    tagline: "Turn ad spend into predictable bestseller momentum.",
     overview:
-      "Master Amazon's complex advertising ecosystem with data-driven PPC strategies that maximize your return on investment while building sustainable bestseller momentum.",
+      "We engineer Amazon PPC structures that surface your titles, defend rankings, and scale profitably with total clarity on what to do next.",
     included: [
-      "Keyword Research & Analysis: Deep-dive competitor analysis and keyword opportunity identification using proprietary research methodologies",
-      "Campaign Structure Optimization: Strategic campaign architecture that maximizes ad spend efficiency and minimizes wasted budget",
-      "Bid Management: Dynamic bidding strategies that adapt to market conditions and competition levels",
-      "Performance Tracking: Comprehensive analytics and reporting that provide actionable insights for continuous improvement",
+      "Deep keyword intelligence with ongoing competitor mirroring",
+      "Campaign architecture tuned for discovery, defense, and scaling",
+      "Automated bid management with human overrides on high-value terms",
+      "Weekly analytics recaps complete with action steps",
     ],
     results: [
-      "Generated over $1 million in sales for authors across diverse genres",
-      "Average ACOS (Advertising Cost of Sales) improvements of 40-60% within the first 90 days of optimization",
+      "$1M+ revenue driven for independent authors",
+      "40-60% ACOS improvement within the first 90 days",
+      "Title rankings that hold steady against aggressive competitors",
     ],
   },
   {
     id: "cross-platform",
     title: "Cross-Platform Digital Marketing",
     icon: Share2,
+    tagline: "Build an audience that stretches far beyond Amazon.",
     overview:
-      "Expand your reach beyond Amazon with integrated marketing campaigns that leverage multiple digital platforms to build a comprehensive author brand and diversified revenue streams.",
+      "We orchestrate full-funnel campaigns across paid, organic, and community channels so eager readers can meet you everywhere they spend time.",
     included: [
-      "Google Ads: Strategic search and display advertising that captures readers at every stage of the buying journey",
-      "Facebook & Instagram Marketing: Targeted social media campaigns that build engaged communities and drive book sales",
-      "LinkedIn Advertising: Professional networking strategies that position you as a thought leader in your industry",
-      "YouTube Marketing: Video content strategies that showcase your expertise and create additional revenue opportunities",
-      "TikTok & Instagram Reels: Short-form content that reaches younger demographics and viral marketing potential",
+      "Google search and display funnels that capture intent at every stage",
+      "Paid social blueprints for Facebook, Instagram, and TikTok",
+      "LinkedIn positioning that amplifies authority and B2B reach",
+      "YouTube editorial calendars with repurposing systems",
+      "Short-form video frameworks engineered for consistent virality",
     ],
     results: [
-      "Increased brand visibility across major platforms",
-      "Diversified revenue streams beyond Amazon",
-      "Stronger author-reader relationships and community building",
-      "Enhanced thought leadership and industry influence",
+      "Stronger brand recall across every major platform",
+      "Multiple revenue streams beyond Amazon royalties",
+      "Communities that convert with higher lifetime value",
+      "Authority positioning that sparks media and speaking invites",
     ],
   },
 ]
 
 export function CoreDigitalMarketingServices() {
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-gradient-to-b from-slate-50 via-white to-white py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Bot className="w-4 h-4" />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-blue-100/80 px-4 py-2 text-sm font-medium text-blue-700">
+            <Bot className="h-4 w-4" />
             Our Core Services
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-            Comprehensive Strategies for
+          <h2 className="text-4xl font-bold text-slate-900 lg:text-5xl">
+            Your Engine for
             <span className="text-blue-600"> Digital Dominance</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            From leveraging cutting-edge AI to mastering Amazon's algorithm and expanding your reach across all digital
-            platforms, we cover every aspect of modern book marketing.
+          <p className="mx-auto mt-4 max-w-3xl text-lg text-slate-600 lg:text-xl">
+            Explore the three signature programs we lean on most. Each card lays out the promise, the hands-on deliverables, and the outcomes you can bank on.
           </p>
         </motion.div>
 
-        <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <AccordionItem value={service.id} className="mb-4 border-b-0">
-                <AccordionTrigger className="flex items-center gap-4 p-6 bg-slate-100 rounded-xl shadow-sm hover:bg-slate-200 transition-all duration-300 text-left">
-                  <service.icon className="w-8 h-8 text-blue-600 flex-shrink-0" />
-                  <h3 className="text-xl font-bold text-slate-900 flex-1">{service.title}</h3>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <Card className="border-0 shadow-xl bg-gradient-to-br from-blue-50 to-purple-50 mt-4">
-                    <CardContent className="p-8 lg:p-12">
-                      <div className="grid lg:grid-cols-2 gap-12">
-                        {/* Overview & Included */}
-                        <div className="space-y-8">
-                          <p className="text-lg text-slate-700 leading-relaxed">{service.overview}</p>
+        <motion.div
+          className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.12,
+              },
+            },
+          }}
+        >
+          {services.map((service, index) => {
+            const deliverablesHeading =
+              service.id === "ai-content"
+                ? "What We Deliver"
+                : service.id === "amazon-ppc"
+                  ? "How We Manage"
+                  : "Where We Show Up"
+            const resultsHeading = service.id === "ai-content" ? "Impact You'll Feel" : "Results You'll See"
+            const [headlineResult, ...supportingResults] = service.results
 
-                          <div className="space-y-4">
-                            <h4 className="text-xl font-semibold text-slate-800">
-                              {service.id === "ai-content"
-                                ? "What's Included:"
-                                : service.id === "amazon-ppc"
-                                  ? "Advanced PPC Strategies:"
-                                  : "Platform Integration:"}
-                            </h4>
-                            <ul className="space-y-3">
-                              {service.included.map((item, index) => (
-                                <li key={index} className="flex items-start gap-3">
-                                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                                  <span className="text-slate-600">{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+            return (
+              <motion.article
+                key={service.id}
+                variants={{
+                  hidden: { opacity: 0, y: 24 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.45, delay: index * 0.05 }}
+                className="h-full"
+              >
+                <Card className="flex h-full flex-col border border-slate-200/60 bg-white/90 shadow-lg shadow-slate-900/5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-2xl">
+                  <CardContent className="flex h-full flex-col gap-10 p-8">
+                    <header className="space-y-5">
+                      <div className="flex items-start gap-4">
+                        <span className="rounded-lg border border-blue-200/60 bg-gradient-to-br from-blue-100 to-blue-50 p-3 text-blue-600">
+                          <service.icon className="h-6 w-6" aria-hidden="true" />
+                        </span>
+                        <div className="space-y-3 text-left">
+                          
+                          <h3 className="text-xl font-semibold text-slate-900 lg:text-2xl">{service.title}</h3>
+                          <p className="text-sm leading-relaxed text-slate-600 lg:text-base">{service.overview}</p>
                         </div>
+                      </div>
+                    </header>
 
-                        {/* Results */}
-                        <div className="space-y-8 bg-white rounded-xl p-8 shadow-md border border-slate-200">
-                          <h4 className="text-xl font-semibold text-slate-800">
-                            {service.id === "ai-content" ? "Results You Can Expect:" : "Proven Results:"}
-                          </h4>
-                          <ul className="space-y-3">
-                            {service.results.map((item, index) => (
-                              <li key={index} className="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
-                                <span className="text-slate-700 font-medium">{item}</span>
+                    <div className="space-y-8">
+                      <section aria-labelledby={`${service.id}-deliverables`} className="space-y-4">
+                        <h4 id={`${service.id}-deliverables`} className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                          {deliverablesHeading}
+                        </h4>
+                        <ul className="space-y-3 text-sm text-slate-700">
+                          {service.included.map((item, itemIndex) => (
+                            <li
+                              key={itemIndex}
+                              className="flex items-start gap-3 rounded-lg bg-white/70 p-3 shadow-sm ring-1 ring-slate-200"
+                            >
+                              <span className="mt-1 rounded-full bg-green-100 p-1 text-green-600">
+                                <CheckCircle className="h-4 w-4" aria-hidden="true" />
+                              </span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </section>
+
+                      <section aria-labelledby={`${service.id}-results`} className="space-y-4">
+                        <h4 id={`${service.id}-results`} className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                          {resultsHeading}
+                        </h4>
+                        <div className="rounded-lg border border-blue-100 bg-blue-50/70 p-4 text-left text-sm text-blue-900 shadow-inner">
+                          <p className="font-semibold leading-snug">{headlineResult}</p>
+                        </div>
+                        {supportingResults.length > 0 && (
+                          <ul className="space-y-2 text-sm text-slate-700">
+                            {supportingResults.map((item, itemIndex) => (
+                              <li
+                                key={itemIndex}
+                                className="flex items-start gap-3 rounded-md border border-blue-100/70 bg-white/80 p-3"
+                              >
+                                <span className="mt-1 rounded-full bg-blue-100 p-1 text-blue-700">
+                                  <CheckCircle className="h-4 w-4" aria-hidden="true" />
+                                </span>
+                                <span className="font-medium leading-snug">{item}</span>
                               </li>
                             ))}
                           </ul>
-                          {/* Image Suggestion for this section */}
-                          <div className="mt-8">
-                            <Image
-                              src="/placeholder.svg?height=300&width=500"
-                              alt={`Visualization for ${service.title}`}
-                              width={500}
-                              height={300}
-                              className="w-full h-auto rounded-lg object-cover"
-                              unoptimized
-                            />
-                            <p className="text-center text-slate-500 text-sm mt-2">
-                              {service.id === "ai-content" && "AI-generated content examples and optimization metrics."}
-                              {service.id === "amazon-ppc" && "Amazon PPC dashboard with sales and ACOS improvements."}
-                              {service.id === "cross-platform" && "Cross-platform analytics showing audience growth."}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
-          ))}
-        </Accordion>
+                        )}
+              </section>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.article>
+            )
+          })}
+        </motion.div>
       </div>
     </section>
   )

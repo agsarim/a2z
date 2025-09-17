@@ -1,15 +1,17 @@
-"use client"
+﻿"use client"
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Star, Quote, CheckCircle } from "lucide-react"
+import { Star, Quote, CheckCircle, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const caseStudies = [
   {
     client: "Brenda Bence",
     title: "Global Leadership Expert",
-    image: "/placeholder.svg?height=80&width=80",
+    image:
+      "https://media.licdn.com/dms/image/v2/D4D03AQHxSBMaD-H01g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1686635822104?e=1761177600&v=beta&t=o9vCgSMQMURZ2m2N8bzWeeO8rCoQtrcc6oyt6D3lJcs",
     challenge:
       "Established leadership coach needed to expand book sales and reach new audiences through digital marketing.",
     strategy: [
@@ -35,9 +37,10 @@ const caseStudies = [
       '"I have worked with Syed for the past year, as he helped me advertise one of our books on Amazon. Syed was devoted to doing what he could to help the book achieve good sales. In terms of actual sales revenues, there were ups and downs throughout the year - and Syed had warned me that would likely be the case. But now, the year of focus and attention has paid off, and the book has achieved strong sales and multiple bestseller status. I am grateful to Syed for his attention and suggestions!"',
   },
   {
-    client: "Greg Stephens",
-    title: "Personal Development Author",
-    image: "/placeholder.svg?height=80&width=80",
+    client: "Michael Ehiginwa (PMP, CBAP, ITIL)",
+    title: "Author | Business Consultant | Senior Business Analyst | Empowering Individuals to Achieve Their Goals",
+    image:
+      "https://media.licdn.com/dms/image/v2/C5603AQHJhSUyXPj03A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1653584787470?e=1761177600&v=beta&t=InLwpsJJiKBgCwzOThbeeqH03TCCBSKwRwM0nj6njB0",
     challenge:
       "New author needed to establish credibility and achieve bestseller status in competitive personal development market.",
     strategy: [
@@ -52,7 +55,7 @@ const caseStudies = [
       "Built engaged social media following of 10,000+ readers",
       "Developed speaking career based on book success",
     ],
-    timeline: "6-month intensive launch and growth campaign",
+    timeline: "5-month intensive launch and growth campaign",
     successFactors: [
       "Pre-launch audience building that created immediate momentum",
       "Strategic partnerships that expanded reach",
@@ -60,29 +63,29 @@ const caseStudies = [
       "Consistent engagement with reader community",
     ],
     testimonial:
-      '"Working with Saqib was a game-changer for my book launch. His expertise in Amazon\'s algorithm and social media strategy helped me hit #1 bestseller status faster than I thought possible. Highly recommend!"',
+      "I worked with Syed for about five months on my book. He was very professional and brought deep insights into book marketing. His experience is profound and his objectivity refreshing. I will definitely want to work with Syed again.",
   },
 ]
 
 export function MarketingCaseStudies() {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="bg-slate-50 py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <div className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Star className="w-4 h-4" />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-600">
+            <Star className="h-4 w-4" />
             Client Success Stories
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="mb-6 text-4xl font-bold text-slate-900 lg:text-5xl">
             Real-World Results:
             <span className="text-green-600"> Transforming Authors into Bestsellers</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="mx-auto max-w-3xl text-xl text-slate-600">
             Explore detailed breakdowns of how our strategic book marketing campaigns have propelled authors to the top
             of their categories and built sustainable author businesses.
           </p>
@@ -95,7 +98,7 @@ export function MarketingCaseStudies() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="grid lg:grid-cols-2 gap-12 items-center"
+              className="grid items-center gap-12 lg:grid-cols-2"
             >
               {/* Left Content - Client Info & Testimonial */}
               <div className="space-y-8">
@@ -115,9 +118,9 @@ export function MarketingCaseStudies() {
                         <div>
                           <h3 className="text-xl font-bold text-slate-900">{study.client}</h3>
                           <p className="text-slate-600">{study.title}</p>
-                          <div className="flex items-center gap-1 mt-2">
+                          <div className="mt-2 flex items-center gap-1">
                             {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                              <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                             ))}
                           </div>
                         </div>
@@ -125,8 +128,8 @@ export function MarketingCaseStudies() {
 
                       {/* Testimonial */}
                       <div className="relative">
-                        <Quote className="w-8 h-8 text-blue-500 mb-4" />
-                        <blockquote className="text-lg text-slate-700 leading-relaxed italic">
+                        <Quote className="mb-4 h-8 w-8 text-blue-500" />
+                        <blockquote className="text-lg italic leading-relaxed text-slate-700">
                           {study.testimonial}
                         </blockquote>
                       </div>
@@ -137,42 +140,42 @@ export function MarketingCaseStudies() {
 
               {/* Right Content - Strategy & Results */}
               <div className="space-y-8">
-                <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8">
-                  <h4 className="text-2xl font-bold text-slate-900 mb-6">Challenge & Strategy</h4>
-                  <p className="text-slate-600 leading-relaxed mb-4">
+                <div className="rounded-2xl bg-gradient-to-br from-slate-50 to-blue-50 p-8">
+                  <h4 className="mb-6 text-2xl font-bold text-slate-900">Challenge & Strategy</h4>
+                  <p className="mb-4 leading-relaxed text-slate-600">
                     <span className="font-semibold">Challenge:</span> {study.challenge}
                   </p>
-                  <h5 className="text-lg font-semibold text-slate-800 mb-3">Strategy Implemented:</h5>
+                  <h5 className="mb-3 text-lg font-semibold text-slate-800">Strategy Implemented:</h5>
                   <ul className="space-y-2">
                     {study.strategy.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                        <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600" />
                         <span className="text-slate-600">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="bg-slate-900 rounded-2xl p-8 text-white">
-                  <h4 className="text-xl font-bold mb-6">Results Achieved</h4>
-                  <ul className="space-y-3 mb-6">
+                <div className="rounded-2xl bg-slate-900 p-8 text-white">
+                  <h4 className="mb-6 text-xl font-bold">Results Achieved</h4>
+                  <ul className="mb-6 space-y-3">
                     {study.results.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-green-400" />
                         <span className="text-slate-300">{item}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="space-y-3">
                     <div className="font-semibold">Timeline:</div>
-                    <div className="text-slate-300 text-sm">{study.timeline}</div>
+                    <div className="text-sm text-slate-300">{study.timeline}</div>
                   </div>
-                  <div className="space-y-3 mt-4">
+                  <div className="mt-4 space-y-3">
                     <div className="font-semibold">Key Success Factors:</div>
                     <ul className="space-y-2">
                       {study.successFactors.map((factor, factorIndex) => (
                         <li key={factorIndex} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-blue-400"></div>
                           <span className="text-slate-300">{factor}</span>
                         </li>
                       ))}
@@ -182,6 +185,16 @@ export function MarketingCaseStudies() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <Link
+            href="/success-stories"
+            className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-green-500/20 transition duration-200 hover:-translate-y-0.5 hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+          >
+            View All Testimonials
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>
