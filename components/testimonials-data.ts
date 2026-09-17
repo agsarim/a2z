@@ -139,6 +139,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     date: "November 21, 2022",
     testimonial: "He's a professional with a very positive attitude who sticks to timelines.",
+    
     avatar: "https://media.licdn.com/dms/image/v2/C4E03AQFAB02f1gvybA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1610339232077?e=1761177600&v=beta&t=TEpN4mCZdga4X-IPIZWCsmZzfOumOaA7FdvKZ-a2Rp0",
   },
   {
