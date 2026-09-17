@@ -1,54 +1,19 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Linkedin, Youtube, Facebook, Instagram, Award, Globe, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Linkedin, Youtube, Facebook, Instagram, Award, Globe, TrendingUp } from 'lucide-react';
 import { SiTiktok } from "@icons-pack/react-simple-icons";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { SparklesCore } from "@/components/ui/sparkles";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 export function HeroSection() {
-  const words = [
-    { text: "Hi," },
-    { text: "I'm" },
-    {
-      text: "Syed",
-      className: "bg-white bg-clip-text text-transparent",
-    },
-    {
-      text: "Saqib",
-      className: "bg-white bg-clip-text text-transparent",
-    },
-    {
-      text: "Mumtaz",
-      className: "bg-white bg-clip-text text-transparent",
-    },
- 
-  
-  ];
-
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden pt-10">
-      {/* Animated Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-blue-500/5 to-transparent rounded-full"></div>
+        <div className="absolute top-0 right-0 h-full w-1/2 bg-blue-500/5"></div>
       </div>
-      {/* Tech Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-
-      {/* Sparkles Overlay */}
-      <SparklesCore
-        minSize={0.5}
-        maxSize={1.5}
-        particleDensity={100}
-        className="absolute inset-0 z-0"
-        colors={["#FFFFFF", "#8888FF", "#FF88FF", "#AAAAFF"]}
-      />
 
       <div className="relative container mx-auto px-4 pt-6 pb-12 sm:pt-8 sm:pb-8 z-10">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
@@ -59,20 +24,11 @@ export function HeroSection() {
             transition={{ duration: 0.8 }}
             className="order-2 lg:order-1 space-y-6 sm:space-y-8"
           >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-300 text-sm font-medium"
-            >
-              <Zap className="w-4 h-4" />
-              Syed Saqib Mumtaz • Growth Marketer • Publishing Strategist • Trainer
-            </motion.div>
+            <p className="text-sm font-medium tracking-wide text-blue-200">MARKETING • PUBLISHING • TRAINING</p>
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
-                <TypewriterEffect words={words} className="inline-flex" />
+                Syed Saqib Mumtaz
               </h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -80,7 +36,7 @@ export function HeroSection() {
                 transition={{ duration: 0.6, delay: 1.5 }}
                 className="text-xl text-slate-300 leading-relaxed max-w-2xl"
               >
-               Digital marketer, publishing strategist, and keynote speaker — I help authors reach more readers and build stronger brands through book marketing, digital strategy, and practical AI tools.
+               Digital marketer, publishing strategist, and keynote speaker. I help authors and experts turn strong ideas into visible, well-positioned work.
               </motion.p>
             </div>
             {/* CTA Buttons */}
@@ -97,7 +53,7 @@ export function HeroSection() {
                   className="inline-block"
                 >
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold">
-                    View Portfolio
+                    Explore my work
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </motion.div>
@@ -113,7 +69,7 @@ export function HeroSection() {
                     variant="outline"
                     className="border-slate-600 text-slate-300 hover:bg-slate-800 px-8 py-4 text-lg bg-transparent"
                   >
-                    Contact Me
+                    Get in touch
                   </Button>
                 </motion.div>
               </Link>

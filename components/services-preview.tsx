@@ -12,7 +12,7 @@ const services = [
     title: "Publishing Strategy & Launch",
     tagline: "From positioning to #1 bestseller",
     description:
-      "End-to-end publishing guidance: positioning, Amazon optimization, and launch playbooks tailored to your goals.",
+      "Publishing support from positioning and Amazon optimisation through to a launch plan that suits your book and audience.",
     features: ["A to Z Services for Publishing", "Positioning", "Amazon SEO / PPC Ads", "Book Launch Strategy "],
     color: "from-teal-500 to-blue-500",
     bgColor: "bg-teal-50",
@@ -22,9 +22,9 @@ const services = [
   {
     icon: Rocket,
     title: "Growth Marketing Advisory",
-    tagline: "Designing systems that scale sustainably",
+    tagline: "Campaigns built around the right priorities",
     description:
-      "Full-funnel strategy, performance marketing, and analytics to turn attention into revenue without burning your brand.",
+      "Marketing strategy, campaign management, and reporting that help you decide what to keep, improve, or stop.",
     features: ["Funnel design", "PPC ads", "Analytics and audit", "Growth Marketing Advisory"],
     color: "from-blue-500 to-indigo-500",
     bgColor: "bg-blue-50",
@@ -37,7 +37,7 @@ const services = [
     title: "Training & Mentorship",
     tagline: "Upskill your team with hands-on learning",
     description:
-      "Workshops and mentorship programs that teach the exact systems I use to drive growth, with actionable templates and tools.",
+      "Workshops and one-to-one support that help people apply useful marketing skills to their own work.",
     features: ["Live Webinar", "Live / Physical Workshops", "Mentoring Sessions", "Online Consultancy"],
     color: "from-purple-500 to-blue-500",
     bgColor: "bg-purple-50",
@@ -49,7 +49,7 @@ const services = [
     title: "Keynote Addresses and Media",
     tagline: "Keynotes, panels, and interviews",
     description:
-      "Topics include AI for marketers, Digital book publishing and marketing, creator-led growth, and building authority and branding in public and online.",
+      "Speaking topics include AI in marketing, digital publishing, book promotion, and building a credible public presence.",
     features: ["Keynote Addresses", "Panel Discussions", "Workshops", "Media Interviews"],
     color: "from-indigo-500 to-purple-500",
     bgColor: "bg-indigo-50",
@@ -72,11 +72,11 @@ export function ServicesPreview() {
             What I do
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-                        Practical strategy, built-for-you systems, and hands-on enablement—so you can launch, grow, and lead.
+                        Publishing, marketing, and training built around the work in front of you.
 
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                      "Tired of marketing plans that never get off the ground? I build practical strategies, done-for-you systems, and hands-on guidance—so your books and brand don’t just launch, they grow and keep winning."
+                      Clear support for authors and teams who need a practical next step, not another presentation.
 
           </p>
         </motion.div>
@@ -137,18 +137,18 @@ export function ServicesPreview() {
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <div className="max-w-3xl mx-auto space-y-6">
-              <h3 className="text-3xl font-bold">Get clarity. Get results</h3>
-              <p className="text-xl text-blue-100">Share your goals, and I’ll map out the fastest way to achieve them.</p>
+              <h3 className="text-3xl font-bold">Start with the question that matters most</h3>
+              <p className="text-xl text-blue-100">We can talk through the brief, the audience, and what a useful first move looks like.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
                   <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
-                    Book a free consult
+                    Start a conversation
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="/success-stories">
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
-                  See How Others Succeeded                  </Button>
+                  Read client stories                  </Button>
                 </Link>
               </div>
             </div>

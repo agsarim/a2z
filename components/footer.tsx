@@ -35,12 +35,12 @@ export function Footer() {
                 <div>
                   <p className="text-lg font-semibold">Syed Saqib Mumtaz</p>
                   <p className="mt-1 text-sm text-slate-400">
-                    Helping authors transform their books into bestsellers with data-driven marketing, publishing, and sales systems.
+                    Marketing, publishing strategy, and training for authors and growing teams.
                   </p>
                 </div>
               </div>
               <p className="text-sm text-slate-500">
-                Join 7,500+ authors who have accelerated their book launches with proven frameworks and hands-on consultancy.
+                Work with a partner who brings structure, candour, and attention to the details that matter.
               </p>
             </div>
             <div>

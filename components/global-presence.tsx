@@ -30,7 +30,7 @@ export function GlobalPresence() {
             <span className="text-blue-400"> on stages and screens</span>
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            I speak about AI for marketers, book-to-business strategy, and creator-led growth. Here are a few highlights.
+            I speak about practical AI use, book marketing, and the decisions behind sustainable audience growth.
           </p>
         </motion.div>
 
@@ -65,7 +65,7 @@ export function GlobalPresence() {
             <div className="bg-slate-800 rounded-xl p-8">
               <h3 className="text-2xl font-bold mb-6">Recent topics</h3>
               <div className="grid sm:grid-cols-2 gap-3 text-slate-300">
-                {["AI for marketers (practical playbooks)", "Amazon algorithm deep-dive", "Book-to-business funnels", "Creator-led growth systems", "Authority building in public", "Data-driven decision making"].map((t, i) => (
+                {["Practical AI for marketers", "Amazon advertising and discoverability", "From book to business", "Growing an audience with intent", "Building trust in public", "Making better decisions with data"].map((t, i) => (
                   <div key={i} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                     <span className="text-sm">{t}</span>

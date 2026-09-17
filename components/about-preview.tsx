@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Award, BookOpen, Users, ArrowRight } from "lucide-react"
+import { BookOpen, Users, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -39,10 +39,10 @@ export function AboutPreview() {
                 About me
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-               "Helping authors and brands grow with <span className="text-blue-600">AI-powered marketing</span> and book marketing."
+               Helping authors and experts make their work easier to find, understand, and buy.
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-              I’m Saqib – a marketer, publishing strategist, and trainer with years of experience launching campaigns, building brands, and turning ideas into measurable results. I combine practical strategy with hands-on execution, delivering plans that get implemented and outcomes that matter.
+              I’m Saqib, a marketer, publishing strategist, and trainer. I work closely with clients on positioning, campaigns, launches, and the practical decisions that move a project forward.
               </p>
             </div>
 
@@ -72,13 +72,13 @@ export function AboutPreview() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  Work with me
+                  Work together
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
               <Link href="/about">
                 <Button size="lg" variant="outline">
-                  View full bio
+                  Read my story
                 </Button>
               </Link>
             </div>
