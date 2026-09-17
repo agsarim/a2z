@@ -12,7 +12,7 @@ const navigation = [
   { name: "About Syed", href: "/about" },
   {
     name: "Services",
-    href: "/services",
+    href: "/#services",
     dropdown: [
       { name: "Digital Marketing", href: "/services/digital-marketing" },
       { name: "Book Publishing", href: "/services/book-publishing" },
@@ -22,7 +22,6 @@ const navigation = [
   },
   { name: "Success Stories", href: "/success-stories" },
     { name: "Media", href: "/media" },
-  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ]
 

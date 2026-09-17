@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
+import { PageStructuredData } from "@/components/seo/structured-data"
+
+export const metadata = pageMetadata("/services/digital-marketing")
+
 import { DigitalMarketingHero } from "@/components/services/digital-marketing/hero"
 import { CoreDigitalMarketingServices } from "@/components/services/digital-marketing/core-services"
 import { MarketingProcessWorkflow } from "@/components/services/digital-marketing/marketing-process-workflow"
@@ -8,6 +13,7 @@ import { CtaSection } from "@/components/services/digital-marketing/cta-section"
 export default function DigitalMarketingPage() {
   return (
     <main className="min-h-screen">
+      <PageStructuredData path="/services/digital-marketing" />
       <DigitalMarketingHero />
       <CoreDigitalMarketingServices />
       <MarketingProcessWorkflow />

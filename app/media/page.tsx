@@ -1,8 +1,14 @@
+import { pageMetadata } from "@/lib/seo"
+import { PageStructuredData } from "@/components/seo/structured-data"
+
+export const metadata = pageMetadata("/media")
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Mic, Users, MessageSquare, GraduationCap } from "lucide-react"
 import { MediaHero } from "@/components/media/hero-section"
+import { SerenaGallery } from "@/components/media/serena-gallery"
 
 type YouTubeItem = {
   type: "youtube"
@@ -61,7 +67,9 @@ export default function MediaPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      <PageStructuredData path="/media" />
       <MediaHero />
+      <SerenaGallery />
 
       <section className="py-20">
         <div className="container mx-auto px-6 max-w-6xl">

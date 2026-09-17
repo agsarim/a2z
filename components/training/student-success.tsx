@@ -134,7 +134,7 @@ export function StudentSuccess() {
             </a>
           </div>
           <p className="text-sm text-slate-500 mt-4">
-            Prefer to chat? <a href="tel:+92-XXX-XXXXXXX" className="text-blue-600 hover:underline">Call us directly</a> or <a href="mailto:saqib@a2zpublishing.com" className="text-blue-600 hover:underline">email us</a>
+            Prefer to chat? <a href="tel:+92-XXX-XXXXXXX" className="text-blue-600 hover:underline">Call us directly</a> or <a href="mailto:saqibmumtaz2171@gmail.com" className="text-blue-600 hover:underline">email us</a>
           </p>
         </motion.div>
       </div>

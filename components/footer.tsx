@@ -5,7 +5,6 @@ const primaryLinks = [
   { label: "About Syed", href: "/about" },
   { label: "Success Stories", href: "/success-stories" },
   { label: "Media", href: "/media" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ]
 
@@ -18,7 +17,7 @@ const serviceLinks = [
 
 const connectLinks = [
   { label: "Book a Free Consultation", href: "https://calendly.com/saqib-mumtaz" },
-  { label: "Email Saqib", href: "mailto:saqib@a2zpublishing.com" },
+  { label: "Email Saqib", href: "mailto:saqibmumtaz2171@gmail.com" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/syed-saqib-mumtaz-hashmi-bookmarketing/" },
 ]
 

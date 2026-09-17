@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
+import { PageStructuredData } from "@/components/seo/structured-data"
+
+export const metadata = pageMetadata("/services/book-publishing")
+
 import { BookPublishingHero } from "@/components/services/book-publishing/hero"
 import { BookPublishingContent } from "@/components/services/book-publishing/content-section"
 import { PublishingPricingPackages } from "@/components/services/book-publishing/pricing-packages"
@@ -9,6 +14,7 @@ import { CtaSection } from "@/components/services/digital-marketing/cta-section"
 export default function BookPublishingPage() {
   return (
     <main className="min-h-screen">
+      <PageStructuredData path="/services/book-publishing" />
       <BookPublishingHero />
       <BookPublishingContent />
       <PublishingPricingPackages />

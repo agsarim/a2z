@@ -60,7 +60,7 @@ const services = [
 
 export function ServicesPreview() {
   return (
-    <section className="py-20 bg-slate-50">
+    <section id="services" className="py-20 bg-slate-50 scroll-mt-24">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

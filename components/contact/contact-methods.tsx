@@ -1,5 +1,6 @@
 "use client"
-import { Mail, Phone, MessageCircle, Linkedin, Calendar } from "lucide-react"
+import { Mail, Phone, MessageCircle, Linkedin, Calendar, Facebook, Instagram, Youtube } from "lucide-react"
+import { SiTiktok } from "@icons-pack/react-simple-icons";
 import { Card, CardContent } from "@/components/ui/card"
 import { useEffect, useState } from "react"
 import { PopupModal } from "react-calendly"
@@ -24,7 +25,7 @@ export function ContactMethods() {
     {
       icon: Mail,
       title: "Email",
-      value: "saqib@a2zpublishing.com",
+      value: "saqibmumtaz2171@gmail.com",
       meta: "Response within 24 hours",
       primary: false,
     },
@@ -43,10 +44,38 @@ export function ContactMethods() {
       primary: false,
     },
     {
+      icon: Facebook,
+      title: "Facebook",
+      value: "@saqibmumtaz2171",
+      meta: "Follow for updates",
+      primary: false,
+    },
+    {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "Connect with me",
+      value: "@saqibmumtaz2171",
       meta: "Professional networking",
+      primary: false,
+    },
+    {
+      icon: SiTiktok,
+      title: "TikTok",
+      value: "@saqibmumtaz2171",
+      meta: "Short tips & insights",
+      primary: false,
+    },
+    {
+      icon: Instagram,
+      title: "Instagram",
+      value: "@saqibmumtaz2171",
+      meta: "Behind the scenes",
+      primary: false,
+    },
+    {
+      icon: Youtube,
+      title: "YouTube",
+      value: "A2ZPublishing",
+      meta: "In-depth tutorials",
       primary: false,
     },
   ]

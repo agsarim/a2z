@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
+import { PageStructuredData } from "@/components/seo/structured-data"
+
+export const metadata = pageMetadata("/success-stories")
+
 import { HeroSection } from "@/components/success-stories/hero-section"
 import { MetricsSection } from "@/components/success-stories/metrics-section"
 import { CaseStudiesSection } from "@/components/success-stories/case-studies-section"
@@ -9,6 +14,7 @@ import {TestimonialsCarousel} from "@/components/testimonials-carousel"
 export default function SuccessStoriesPage() {
   return (
     <main className="min-h-screen">
+      <PageStructuredData path="/success-stories" />
       <HeroSection />
             <VideoTestimonialsSection />
 

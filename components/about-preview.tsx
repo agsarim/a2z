@@ -94,11 +94,12 @@ export function AboutPreview() {
             <div className="relative bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <Image
-                  src="/images/headshot9.jpg"
-                  alt="Syed Saqib Mumtaz - Digital Marketing Expert"
-                  width={400}
-                  height={400}
-                  className="w-full h-auto rounded-lg"
+                  src="/images/serena/saqib-mumtaz-portrait.jpeg"
+                  alt="Syed Saqib Mumtaz seated at the Serena event"
+                  width={2296}
+                  height={4080}
+                  sizes="(min-width: 1024px) 40vw, 90vw"
+                  className="w-full aspect-[4/5] object-cover object-center rounded-lg"
                 />
 
                 {/* Floating Achievement Cards */}

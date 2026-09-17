@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
+import { PageStructuredData } from "@/components/seo/structured-data"
+
+export const metadata = pageMetadata("/contact")
+
 import { HeroSection } from "@/components/contact/hero-section"
 import { FreeConsultationDetails } from "@/components/contact/free-consultation-details"
 import { ConsultationProcess } from "@/components/contact/consultation-process"
@@ -9,6 +14,7 @@ import { NextSteps } from "@/components/contact/next-steps"
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
+      <PageStructuredData path="/contact" />
       <HeroSection />
       <FreeConsultationDetails />
       <ConsultationProcess />

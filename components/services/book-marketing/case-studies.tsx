@@ -11,7 +11,7 @@ const caseStudies = [
     client: "Brenda Bence",
     title: "Global Leadership Expert",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQHxSBMaD-H01g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1686635822104?e=1761177600&v=beta&t=o9vCgSMQMURZ2m2N8bzWeeO8rCoQtrcc6oyt6D3lJcs",
+      "/images/clients/brenda-bence.png",
     challenge:
       "Established leadership coach needed to expand book sales and reach new audiences through digital marketing.",
     strategy: [
@@ -40,7 +40,7 @@ const caseStudies = [
     client: "Michael Ehiginwa (PMP, CBAP, ITIL)",
     title: "Author | Business Consultant | Senior Business Analyst | Empowering Individuals to Achieve Their Goals",
     image:
-      "https://media.licdn.com/dms/image/v2/C5603AQHJhSUyXPj03A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1653584787470?e=1761177600&v=beta&t=InLwpsJJiKBgCwzOThbeeqH03TCCBSKwRwM0nj6njB0",
+      "/images/clients/michael-ehiginwa.jpg",
     challenge:
       "New author needed to establish credibility and achieve bestseller status in competitive personal development market.",
     strategy: [
@@ -112,7 +112,7 @@ export function MarketingCaseStudies() {
                           alt={study.client}
                           width={80}
                           height={80}
-                          className="rounded-full"
+                          className="h-20 w-20 rounded-full object-cover object-top flex-shrink-0 bg-white"
                           unoptimized
                         />
                         <div>

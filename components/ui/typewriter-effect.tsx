@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const TypewriterEffect = ({
@@ -34,7 +34,7 @@ export const TypewriterEffect = ({
     }),
   };
 
-  const characterVariants = {
+  const characterVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -48,15 +48,17 @@ export const TypewriterEffect = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 my-6", className)}>
-      <motion.div
+    <span className={cn("flex space-x-1 my-6", className)}>
+      <span className="sr-only">{words.map((word) => word.text).join(" ")}</span>
+      <motion.span
+        aria-hidden="true"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="flex flex-wrap"
       >
         {wordsArray.map((word, idx) => (
-          <span key={word.text + idx} className="inline-block">
+          <span key={word.text.join("") + idx} className="inline-block">
             {word.text.map((char, charIdx) => (
               <motion.span
                 key={char + charIdx}
@@ -72,8 +74,9 @@ export const TypewriterEffect = ({
             )}
           </span>
         ))}
-      </motion.div>
+      </motion.span>
       <motion.span
+        aria-hidden="true"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
@@ -87,6 +90,6 @@ export const TypewriterEffect = ({
           cursorClassName
         )}
       />
-    </div>
+    </span>
   );
 };

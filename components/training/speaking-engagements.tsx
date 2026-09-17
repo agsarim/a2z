@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mic, GraduationCap, Briefcase, BookOpen, CheckCircle } from "lucide-react"
 
@@ -76,6 +77,20 @@ export function SpeakingEngagements() {
         </motion.div>
 
         {/* Recent Speaking Engagements */}
+        <figure className="max-w-4xl mx-auto mb-16 overflow-hidden rounded-2xl border border-slate-700 bg-slate-800">
+          <Image
+            src="/images/serena/saqib-mumtaz-speaking.jpeg"
+            alt="Syed Saqib Mumtaz addressing the Pakistan Business Leaders Summit at Serena"
+            width={1200}
+            height={1600}
+            sizes="(min-width: 768px) 480px, 90vw"
+            className="w-full max-w-md mx-auto h-auto"
+          />
+          <figcaption className="p-6 text-center">
+            <p className="font-semibold text-white">Pakistan Business Leaders Summit</p>
+            <p className="mt-1 text-sm text-slate-300">Speaking at Serena · 2026</p>
+          </figcaption>
+        </figure>
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-center mb-12">Recent Speaking Engagements</h3>
           <div className="grid md:grid-cols-2 gap-8">

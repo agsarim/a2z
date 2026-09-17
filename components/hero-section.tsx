@@ -1,7 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Linkedin, Mail, Youtube, Award, Globe, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Linkedin, Youtube, Facebook, Instagram, Award, Globe, TrendingUp, Zap } from 'lucide-react';
+import { SiTiktok } from "@icons-pack/react-simple-icons";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -78,7 +80,7 @@ export function HeroSection() {
                 transition={{ duration: 0.6, delay: 1.5 }}
                 className="text-xl text-slate-300 leading-relaxed max-w-2xl"
               >
-               Digital marketer, publisher, best seller maker and keynote speaker — I craft AI-driven strategies that transform books into best sellers with marketing strategies that work. and brands into powerful growth engines, , entrepreneurs, and teams launch, scale, and thrive.
+               Digital marketer, publishing strategist, and keynote speaker — I help authors reach more readers and build stronger brands through book marketing, digital strategy, and practical AI tools.
               </motion.p>
             </div>
             {/* CTA Buttons */}
@@ -123,20 +125,30 @@ export function HeroSection() {
               transition={{ duration: 0.6, delay: 2.1 }}
               className="flex flex-col gap-6 pt-8"
             >
-              <div className="flex items-center gap-4 text-slate-300">
+              <div className="flex flex-wrap items-center gap-4 text-slate-300">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link href="https://www.linkedin.com/in/syed-saqib-mumtaz-hashmi-bookmarketing/" target="_blank" className="hover:text-white transition-colors">
+                  <Link href="https://www.facebook.com/saqibmumtaz2171" target="_blank" className="hover:text-white transition-colors">
+                    <span className="inline-flex items-center gap-2"><Facebook className="w-5 h-5" /> Facebook</span>
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link href="https://www.linkedin.com/in/saqibmumtaz2171" target="_blank" className="hover:text-white transition-colors">
                     <span className="inline-flex items-center gap-2"><Linkedin className="w-5 h-5" /> LinkedIn</span>
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link href="https://www.amazonkdp101.com" target="_blank" className="hover:text-white transition-colors">
-                    <span className="inline-flex items-center gap-2"><Youtube className="w-5 h-5" /> YouTube</span>
+                  <Link href="https://www.tiktok.com/@saqibmumtaz2171" target="_blank" className="hover:text-white transition-colors">
+                    <span className="inline-flex items-center gap-2"><SiTiktok className="w-5 h-5" /> TikTok</span>
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Link href="mailto:hello@saqibhashmi.com" className="hover:text-white transition-colors">
-                    <span className="inline-flex items-center gap-2"><Mail className="w-5 h-5" /> Email</span>
+                  <Link href="https://www.instagram.com/saqibmumtaz2171" target="_blank" className="hover:text-white transition-colors">
+                    <span className="inline-flex items-center gap-2"><Instagram className="w-5 h-5" /> Instagram</span>
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link href="https://www.youtube.com/@A2ZPublishing" target="_blank" className="hover:text-white transition-colors">
+                    <span className="inline-flex items-center gap-2"><Youtube className="w-5 h-5" /> YouTube A2ZPublishing</span>
                   </Link>
                 </motion.div>
               </div>
@@ -175,6 +187,8 @@ export function HeroSection() {
                     width={840}
                     height={840}
                     alt="Saqib Mumtaz headshot"
+                    priority
+                    sizes="(min-width: 1024px) 50vw, (min-width: 640px) 448px, 320px"
                     className="w-full h-auto object-cover rounded-xl"
                   />
                 </motion.div>

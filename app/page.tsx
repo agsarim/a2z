@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
+import { PageStructuredData } from "@/components/seo/structured-data"
+
+export const metadata = pageMetadata("/")
+
 import { HeroSection } from "@/components/hero-section"
 import { StatsSection } from "@/components/stats-section"
 import { ServicesPreview } from "@/components/services-preview"
@@ -137,6 +142,7 @@ function FinalCTA() {
 export default function HomePage() {
   return (
     <main className="min-h-screen">
+      <PageStructuredData path="/" />
       <HeroSection />
       <SectionDivider />
       <AboutPreview />

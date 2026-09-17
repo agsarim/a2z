@@ -1,3 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
+import { PageStructuredData } from "@/components/seo/structured-data"
+
+export const metadata = pageMetadata("/training")
+
 import { HeroSection } from "@/components/training/hero-section"
 import { TrainingContent } from "@/components/training/content-section"
 import { TrainingPrograms } from "@/components/training/training-programs"
@@ -13,6 +18,7 @@ import { CtaSection } from "@/components/services/digital-marketing/cta-section"
 export default function TrainingPage() {
   return (
     <main className="min-h-screen">
+      <PageStructuredData path="/training" />
       <HeroSection />
       <TrainingContent />
       <TrainingPrograms />

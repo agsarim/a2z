@@ -43,10 +43,11 @@ export function MediaHero() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                  src="/images/speaking.jpg"
-                  alt="Professional speaking engagement"
-                width={600}
-                height={500}
+                src="/images/serena/saqib-mumtaz-keynote.jpeg"
+                alt="Syed Saqib Mumtaz speaking at the Pakistan Business Leaders Summit"
+                width={1200}
+                height={1600}
+                sizes="(min-width: 1024px) 520px, 90vw"
                 className="w-full h-auto object-cover"
                 priority
               />
